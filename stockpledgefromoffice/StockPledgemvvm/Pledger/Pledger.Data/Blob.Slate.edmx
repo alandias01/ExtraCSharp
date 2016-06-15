@@ -1,0 +1,1109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="SlateModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="SlateModelStoreContainer">
+          <EntitySet Name="Pledge" EntityType="SlateModel.Store.Pledge" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="StartingPositionView" EntityType="SlateModel.Store.StartingPositionView" store:Type="Views" store:Schema="dbo" store:Name="StartingPositionView">
+            <DefiningQuery>SELECT 
+      [StartingPositionView].[Id] AS [Id], 
+      [StartingPositionView].[DateInserted] AS [DateInserted], 
+      [StartingPositionView].[LoadDate] AS [LoadDate], 
+      [StartingPositionView].[FileDate] AS [FileDate], 
+      [StartingPositionView].[ClearingNo] AS [ClearingNo], 
+      [StartingPositionView].[Book] AS [Book], 
+      [StartingPositionView].[CounterpartyCode] AS [CounterpartyCode], 
+      [StartingPositionView].[CounterpartyName] AS [CounterpartyName], 
+      [StartingPositionView].[CounterpartyMajor] AS [CounterpartyMajor], 
+      [StartingPositionView].[BorrowLoanIndicator] AS [BorrowLoanIndicator], 
+      [StartingPositionView].[CollateralFlag] AS [CollateralFlag], 
+      [StartingPositionView].[SecurityCode] AS [SecurityCode], 
+      [StartingPositionView].[SecurityCodeType] AS [SecurityCodeType], 
+      [StartingPositionView].[Ticker] AS [Ticker], 
+      [StartingPositionView].[InHouseReference] AS [InHouseReference], 
+      [StartingPositionView].[Quick] AS [Quick], 
+      [StartingPositionView].[Sedol] AS [Sedol], 
+      [StartingPositionView].[Cusip] AS [Cusip], 
+      [StartingPositionView].[Reuter] AS [Reuter], 
+      [StartingPositionView].[SecurityClass] AS [SecurityClass], 
+      [StartingPositionView].[SecurityIssuerName] AS [SecurityIssuerName], 
+      [StartingPositionView].[SecurityDescription] AS [SecurityDescription], 
+      [StartingPositionView].[BondIndicator] AS [BondIndicator], 
+      [StartingPositionView].[LoanValue] AS [LoanValue], 
+      [StartingPositionView].[LoanCurrency] AS [LoanCurrency], 
+      [StartingPositionView].[Quantity] AS [Quantity], 
+      [StartingPositionView].[TradeReference] AS [TradeReference], 
+      [StartingPositionView].[Rate] AS [Rate], 
+      [StartingPositionView].[DayIndicator] AS [DayIndicator], 
+      [StartingPositionView].[TradeDate] AS [TradeDate], 
+      [StartingPositionView].[SecuritySettlementDate] AS [SecuritySettlementDate], 
+      [StartingPositionView].[CashSettlementDate] AS [CashSettlementDate], 
+      [StartingPositionView].[SecuritySettlementMode] AS [SecuritySettlementMode], 
+      [StartingPositionView].[CashSettlementMode] AS [CashSettlementMode], 
+      [StartingPositionView].[TermDate] AS [TermDate], 
+      [StartingPositionView].[DvpIndicator] AS [DvpIndicator], 
+      [StartingPositionView].[CallableIndicator] AS [CallableIndicator], 
+      [StartingPositionView].[Finder] AS [Finder], 
+      [StartingPositionView].[FinderRate] AS [FinderRate], 
+      [StartingPositionView].[NetDividendPercentage] AS [NetDividendPercentage], 
+      [StartingPositionView].[Collateral] AS [Collateral], 
+      [StartingPositionView].[CollateralTypeIndicator] AS [CollateralTypeIndicator], 
+      [StartingPositionView].[Dealer] AS [Dealer], 
+      [StartingPositionView].[OverseasTaxPercentage] AS [OverseasTaxPercentage], 
+      [StartingPositionView].[DomesticTaxPercentage] AS [DomesticTaxPercentage], 
+      [StartingPositionView].[InternalComment] AS [InternalComment], 
+      [StartingPositionView].[ExternalComment] AS [ExternalComment], 
+      [StartingPositionView].[TransactionType] AS [TransactionType], 
+      [StartingPositionView].[FundIdentifier] AS [FundIdentifier], 
+      [StartingPositionView].[FundMajor] AS [FundMajor], 
+      [StartingPositionView].[OutstandingPendingIndicator] AS [OutstandingPendingIndicator], 
+      [StartingPositionView].[LoanReturnIndicator] AS [LoanReturnIndicator], 
+      [StartingPositionView].[SettledFlag] AS [SettledFlag], 
+      [StartingPositionView].[PrePaymentRate] AS [PrePaymentRate], 
+      [StartingPositionView].[OwnSecurityClearerCode] AS [OwnSecurityClearerCode], 
+      [StartingPositionView].[OwnCashClearerCode] AS [OwnCashClearerCode], 
+      [StartingPositionView].[CounterpartySecurityClearerCode] AS [CounterpartySecurityClearerCode], 
+      [StartingPositionView].[CounterpartyCashClearerCode] AS [CounterpartyCashClearerCode], 
+      [StartingPositionView].[AccruedInterest] AS [AccruedInterest], 
+      [StartingPositionView].[MarketValue] AS [MarketValue], 
+      [StartingPositionView].[TradeCategory] AS [TradeCategory], 
+      [StartingPositionView].[LinkReference] AS [LinkReference], 
+      [StartingPositionView].[MinimumFee] AS [MinimumFee], 
+      [StartingPositionView].[MinimumFeeCurrency] AS [MinimumFeeCurrency], 
+      [StartingPositionView].[ActivtyDate] AS [ActivtyDate], 
+      [StartingPositionView].[Currency] AS [Currency], 
+      [StartingPositionView].[FailCode] AS [FailCode], 
+      [StartingPositionView].[InitialLoanValue] AS [InitialLoanValue], 
+      [StartingPositionView].[InitialQuantity] AS [InitialQuantity], 
+      [StartingPositionView].[CounterpartyCrossReference] AS [CounterpartyCrossReference], 
+      [StartingPositionView].[Isin] AS [Isin], 
+      [StartingPositionView].[FundCrossReference] AS [FundCrossReference], 
+      [StartingPositionView].[RecalledIndicator] AS [RecalledIndicator], 
+      [StartingPositionView].[IntercompanyReference] AS [IntercompanyReference], 
+      [StartingPositionView].[LocationCode] AS [LocationCode], 
+      [StartingPositionView].[LocationCrossReference] AS [LocationCrossReference], 
+      [StartingPositionView].[RepoTypeTrade] AS [RepoTypeTrade], 
+      [StartingPositionView].[MonthlyBilling] AS [MonthlyBilling], 
+      [StartingPositionView].[TotalAccrual] AS [TotalAccrual], 
+      [StartingPositionView].[TotalAccrualToDate] AS [TotalAccrualToDate], 
+      [StartingPositionView].[TotalPaidToDate] AS [TotalPaidToDate], 
+      [StartingPositionView].[AssociatedTransaction] AS [AssociatedTransaction], 
+      [StartingPositionView].[CouponAccrualdays] AS [CouponAccrualdays], 
+      [StartingPositionView].[OCPTY_SWIFT] AS [OCPTY_SWIFT], 
+      [StartingPositionView].[OC_SWIFT] AS [OC_SWIFT], 
+      [StartingPositionView].[OC_ACCNR] AS [OC_ACCNR], 
+      [StartingPositionView].[OC_SUBACC] AS [OC_SUBACC], 
+      [StartingPositionView].[OC_ACCREF] AS [OC_ACCREF], 
+      [StartingPositionView].[OC_CONTACT] AS [OC_CONTACT], 
+      [StartingPositionView].[OC_NAME] AS [OC_NAME], 
+      [StartingPositionView].[OS_SWIFT] AS [OS_SWIFT], 
+      [StartingPositionView].[OS_ACCNR] AS [OS_ACCNR], 
+      [StartingPositionView].[OS_SUBACC] AS [OS_SUBACC], 
+      [StartingPositionView].[OS_ACCREF] AS [OS_ACCREF], 
+      [StartingPositionView].[OS_CONTACT] AS [OS_CONTACT], 
+      [StartingPositionView].[OS_NAME] AS [OS_NAME], 
+      [StartingPositionView].[CC_SWIFT] AS [CC_SWIFT], 
+      [StartingPositionView].[CC_ACCNR] AS [CC_ACCNR], 
+      [StartingPositionView].[CC_SUBACC] AS [CC_SUBACC], 
+      [StartingPositionView].[CC_ACCREF] AS [CC_ACCREF], 
+      [StartingPositionView].[CC_CONTACT] AS [CC_CONTACT], 
+      [StartingPositionView].[CC_NAME] AS [CC_NAME], 
+      [StartingPositionView].[CS_SWIFT] AS [CS_SWIFT], 
+      [StartingPositionView].[CS_ACCNR] AS [CS_ACCNR], 
+      [StartingPositionView].[CS_SUBACC] AS [CS_SUBACC], 
+      [StartingPositionView].[CS_ACCREF] AS [CS_ACCREF], 
+      [StartingPositionView].[CS_CONTACT] AS [CS_CONTACT], 
+      [StartingPositionView].[CS_NAME] AS [CS_NAME], 
+      [StartingPositionView].[SettlementInstructionRequiredIndicator] AS [SettlementInstructionRequiredIndicator], 
+      [StartingPositionView].[NonCashCollateralHaircutPercentage] AS [NonCashCollateralHaircutPercentage], 
+      [StartingPositionView].[MarketValueInLoanCurrency] AS [MarketValueInLoanCurrency], 
+      [StartingPositionView].[RateSign] AS [RateSign], 
+      [StartingPositionView].[FinderFeeSign] AS [FinderFeeSign], 
+      [StartingPositionView].[PrepaymentRateSign] AS [PrepaymentRateSign], 
+      [StartingPositionView].[SecurityClassCrossReference] AS [SecurityClassCrossReference], 
+      [StartingPositionView].[AutoSettledIndicator] AS [AutoSettledIndicator], 
+      [StartingPositionView].[OldPrice] AS [OldPrice], 
+      [StartingPositionView].[NewPrice] AS [NewPrice], 
+      [StartingPositionView].[EffectiveDate] AS [EffectiveDate], 
+      [StartingPositionView].[PayableReceivableIndicator] AS [PayableReceivableIndicator], 
+      [StartingPositionView].[TimeOfMarkQuantity] AS [TimeOfMarkQuantity], 
+      [StartingPositionView].[TimeOfMarkFundQuantity] AS [TimeOfMarkFundQuantity], 
+      [StartingPositionView].[AccruedInterestOnMark] AS [AccruedInterestOnMark], 
+      [StartingPositionView].[AccruedInterestPayReceive] AS [AccruedInterestPayReceive], 
+      [StartingPositionView].[ExposureMarginPercentage] AS [ExposureMarginPercentage], 
+      [StartingPositionView].[ReturnPresentOnTrade] AS [ReturnPresentOnTrade], 
+      [StartingPositionView].[CRS_CGO_RIDS] AS [CRS_CGO_RIDS], 
+      [StartingPositionView].[QTY_2DP] AS [QTY_2DP], 
+      [StartingPositionView].[INIT_QTY_2DP] AS [INIT_QTY_2DP], 
+      [StartingPositionView].[QTY_TM_MRK_2DP] AS [QTY_TM_MRK_2DP], 
+      [StartingPositionView].[FND_QTY_TM_M_2DP] AS [FND_QTY_TM_M_2DP], 
+      [StartingPositionView].[SecurityCountryOfIssue] AS [SecurityCountryOfIssue], 
+      [StartingPositionView].[RedenominationFlag] AS [RedenominationFlag], 
+      [StartingPositionView].[InternalCommentLine2] AS [InternalCommentLine2], 
+      [StartingPositionView].[FromRepo] AS [FromRepo], 
+      [StartingPositionView].[ToRepo] AS [ToRepo], 
+      [StartingPositionView].[UniqueTradeReference] AS [UniqueTradeReference], 
+      [StartingPositionView].[FundMajorCrossReference] AS [FundMajorCrossReference], 
+      [StartingPositionView].[OwnContractReference] AS [OwnContractReference], 
+      [StartingPositionView].[AuthorizationRequired] AS [AuthorizationRequired], 
+      [StartingPositionView].[CashBulkReference] AS [CashBulkReference], 
+      [StartingPositionView].[SecurityBulkReference] AS [SecurityBulkReference], 
+      [StartingPositionView].[HK_STMP_DT] AS [HK_STMP_DT], 
+      [StartingPositionView].[HK_STMP_DUTY] AS [HK_STMP_DUTY], 
+      [StartingPositionView].[HK_STMP_VAL] AS [HK_STMP_VAL], 
+      [StartingPositionView].[CounterpartyInternalReference] AS [CounterpartyInternalReference], 
+      [StartingPositionView].[Price] AS [Price], 
+      [StartingPositionView].[LastDividendExDate] AS [LastDividendExDate], 
+      [StartingPositionView].[LastDividendPayDate] AS [LastDividendPayDate], 
+      [StartingPositionView].[LastDividendRecordDate] AS [LastDividendRecordDate], 
+      [StartingPositionView].[LastDividendGross] AS [LastDividendGross], 
+      [StartingPositionView].[LastDividendNet] AS [LastDividendNet], 
+      [StartingPositionView].[LastDividendCurrency] AS [LastDividendCurrency], 
+      [StartingPositionView].[LastDividendExchangeRate] AS [LastDividendExchangeRate], 
+      [StartingPositionView].[FXT_TR_CST] AS [FXT_TR_CST], 
+      [StartingPositionView].[SPREAD] AS [SPREAD], 
+      [StartingPositionView].[SIZE] AS [SIZE], 
+      [StartingPositionView].[MAX_SHS_PDY] AS [MAX_SHS_PDY], 
+      [StartingPositionView].[WK_CLNT_ID] AS [WK_CLNT_ID], 
+      [StartingPositionView].[RATING_TYPE] AS [RATING_TYPE], 
+      [StartingPositionView].[RATING] AS [RATING], 
+      [StartingPositionView].[DEF_PROB_1YR] AS [DEF_PROB_1YR], 
+      [StartingPositionView].[DEF_PROB_2YR] AS [DEF_PROB_2YR], 
+      [StartingPositionView].[DEF_PROB_3YR] AS [DEF_PROB_3YR], 
+      [StartingPositionView].[DEF_PROB_4YR] AS [DEF_PROB_4YR], 
+      [StartingPositionView].[DEF_PROB_5YR] AS [DEF_PROB_5YR], 
+      [StartingPositionView].[DEF_PROB_6YR] AS [DEF_PROB_6YR], 
+      [StartingPositionView].[DEF_PROB_7YR] AS [DEF_PROB_7YR], 
+      [StartingPositionView].[DEF_PROB_8YR] AS [DEF_PROB_8YR], 
+      [StartingPositionView].[DEF_PROB_9YR] AS [DEF_PROB_9YR], 
+      [StartingPositionView].[DEF_PROB_10Y] AS [DEF_PROB_10Y], 
+      [StartingPositionView].[SIZE_TYPE] AS [SIZE_TYPE], 
+      [StartingPositionView].[SECTOR] AS [SECTOR], 
+      [StartingPositionView].[F_GEN_REL] AS [F_GEN_REL], 
+      [StartingPositionView].[C_GEN_REL] AS [C_GEN_REL], 
+      [StartingPositionView].[NoMarkTradeIndicator] AS [NoMarkTradeIndicator], 
+      [StartingPositionView].[ExternalCommentLine2] AS [ExternalCommentLine2], 
+      [StartingPositionView].[MatchedTradeIndicator] AS [MatchedTradeIndicator], 
+      [StartingPositionView].[LoanCurrencyExchangeRate] AS [LoanCurrencyExchangeRate], 
+      [StartingPositionView].[SecurityCurrencyExchangeRate] AS [SecurityCurrencyExchangeRate], 
+      [StartingPositionView].[RequiredNonCashCollateralMargin] AS [RequiredNonCashCollateralMargin], 
+      [StartingPositionView].[LoanetBatchCode] AS [LoanetBatchCode], 
+      [StartingPositionView].[LoanetDividendTracking] AS [LoanetDividendTracking], 
+      [StartingPositionView].[LoanetMarkEligibility] AS [LoanetMarkEligibility], 
+      [StartingPositionView].[LoanetCallbackRequired] AS [LoanetCallbackRequired], 
+      [StartingPositionView].[LoanetNonCashCollateralType] AS [LoanetNonCashCollateralType], 
+      [StartingPositionView].[LoanetProfitCenter] AS [LoanetProfitCenter], 
+      [StartingPositionView].[LoanetDtcReasonCode] AS [LoanetDtcReasonCode], 
+      [StartingPositionView].[LoanetDeliveryCode] AS [LoanetDeliveryCode], 
+      [StartingPositionView].[LimSentFlag] AS [LimSentFlag], 
+      [StartingPositionView].[LenderCollateralGrouping] AS [LenderCollateralGrouping], 
+      [StartingPositionView].[CashWashValue] AS [CashWashValue], 
+      [StartingPositionView].[CashWashCurrency] AS [CashWashCurrency], 
+      [StartingPositionView].[AgencyShareType] AS [AgencyShareType], 
+      [StartingPositionView].[AgencyReference] AS [AgencyReference], 
+      [StartingPositionView].[AgencyPrice] AS [AgencyPrice], 
+      [StartingPositionView].[AgencyPriority] AS [AgencyPriority], 
+      [StartingPositionView].[AgencyCommentsLine1] AS [AgencyCommentsLine1], 
+      [StartingPositionView].[AgencyCommentsLine2] AS [AgencyCommentsLine2], 
+      [StartingPositionView].[CashPoolValue] AS [CashPoolValue], 
+      [StartingPositionView].[LoanPrice] AS [LoanPrice], 
+      [StartingPositionView].[MarketPrice] AS [MarketPrice], 
+      [StartingPositionView].[MatchedDefaultVehicle] AS [MatchedDefaultVehicle], 
+      [StartingPositionView].[TradeInputTime] AS [TradeInputTime], 
+      [StartingPositionView].[RepoType] AS [RepoType], 
+      [StartingPositionView].[MinimumFeeType] AS [MinimumFeeType], 
+      [StartingPositionView].[MinimumFeeValueCurrency] AS [MinimumFeeValueCurrency], 
+      [StartingPositionView].[MinimumFeeValue] AS [MinimumFeeValue], 
+      [StartingPositionView].[FundName] AS [FundName], 
+      [StartingPositionView].[ArrangementFee] AS [ArrangementFee], 
+      [StartingPositionView].[BulkCashPoolCode] AS [BulkCashPoolCode], 
+      [StartingPositionView].[SecurityBridgeMode] AS [SecurityBridgeMode], 
+      [StartingPositionView].[CashBridgeMode] AS [CashBridgeMode], 
+      [StartingPositionView].[SecuritySettlementDueDate] AS [SecuritySettlementDueDate], 
+      [StartingPositionView].[CashSettlementDueDate] AS [CashSettlementDueDate], 
+      [StartingPositionView].[MarketPriceInTradeCurrency] AS [MarketPriceInTradeCurrency], 
+      [StartingPositionView].[FundAllocationDate] AS [FundAllocationDate], 
+      [StartingPositionView].[GtfReference] AS [GtfReference], 
+      [StartingPositionView].[ForwardDateReallocationFlag] AS [ForwardDateReallocationFlag], 
+      [StartingPositionView].[REPO_MAT] AS [REPO_MAT], 
+      [StartingPositionView].[CP_COLL_VAL] AS [CP_COLL_VAL], 
+      [StartingPositionView].[MBS_PAYDOWN] AS [MBS_PAYDOWN], 
+      [StartingPositionView].[ORIG_FACE] AS [ORIG_FACE], 
+      [StartingPositionView].[CUR_STK_FACT] AS [CUR_STK_FACT], 
+      [StartingPositionView].[PREV_STK_FAC] AS [PREV_STK_FAC], 
+      [StartingPositionView].[CUR_TRD_FACT] AS [CUR_TRD_FACT], 
+      [StartingPositionView].[CUR_FACT_REC] AS [CUR_FACT_REC], 
+      [StartingPositionView].[CUR_FACT_EX] AS [CUR_FACT_EX], 
+      [StartingPositionView].[CUR_FACT_PAY] AS [CUR_FACT_PAY], 
+      [StartingPositionView].[FIN_RTN_FLAG] AS [FIN_RTN_FLAG], 
+      [StartingPositionView].[PND_CNC_FLG] AS [PND_CNC_FLG], 
+      [StartingPositionView].[G1PositionId] AS [G1PositionId], 
+      [StartingPositionView].[G1PositionLoadFileId] AS [G1PositionLoadFileId], 
+      [StartingPositionView].[TradeRef] AS [TradeRef]
+      FROM [dbo].[StartingPositionView] AS [StartingPositionView]</DefiningQuery>
+          </EntitySet>
+        </EntityContainer>
+        <EntityType Name="Pledge">
+          <Key>
+            <PropertyRef Name="PledgeId" />
+          </Key>
+          <Property Name="PledgeId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="PledgeType" Type="varchar" MaxLength="2" />
+          <Property Name="G1Id" Type="int" />
+          <Property Name="G1TradeRef" Type="varchar" MaxLength="50" />
+          <Property Name="DtcId" Type="int" />
+          <Property Name="DtcMessageId" Type="varchar" MaxLength="500" />
+          <Property Name="Source" Type="varchar" MaxLength="50" />
+          <Property Name="DateEntered" Type="datetime" Nullable="false" />
+          <Property Name="EnteredBy" Type="varchar" Nullable="false" MaxLength="500" />
+          <Property Name="Processed" Type="bit" Nullable="false" />
+          <Property Name="SendToG1" Type="bit" Nullable="false" />
+          <Property Name="SendToDtc" Type="bit" Nullable="false" />
+          <Property Name="DateSentToG1" Type="datetime" />
+          <Property Name="DateSentToDtc" Type="datetime" />
+          <Property Name="DateConfirmedFromG1" Type="datetime" />
+          <Property Name="DateResponseConfirmedFromDtc" Type="datetime" />
+          <Property Name="DateConfirmedFromDtc" Type="datetime" />
+          <Property Name="ClearingNo" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Cusip" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="Ticker" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="Quantity" Type="int" Nullable="false" />
+          <Property Name="LoanValue" Type="float" Nullable="false" />
+          <Property Name="Pledgor" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Pledgee" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="G1ResponseCode" Type="varchar" MaxLength="50" />
+          <Property Name="DtcResponseCode" Type="varchar" MaxLength="50" />
+          <Property Name="G1Response" Type="varchar" MaxLength="350" />
+          <Property Name="DtcResponse" Type="varchar" MaxLength="500" />
+          <Property Name="DtcStatusCode" Type="varchar" Nullable="false" MaxLength="1" />
+        </EntityType>
+        <!--Errors Found During Generation:
+      warning 6002: The table/view 'Slate.dbo.StartingPositionView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      -->
+        <EntityType Name="StartingPositionView">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" />
+          <Property Name="DateInserted" Type="datetime" />
+          <Property Name="LoadDate" Type="datetime" />
+          <Property Name="FileDate" Type="datetime" />
+          <Property Name="ClearingNo" Type="varchar" MaxLength="50" />
+          <Property Name="Book" Type="varchar" MaxLength="20" />
+          <Property Name="CounterpartyCode" Type="varchar" MaxLength="100" />
+          <Property Name="CounterpartyName" Type="varchar" MaxLength="100" />
+          <Property Name="CounterpartyMajor" Type="varchar" MaxLength="100" />
+          <Property Name="BorrowLoanIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="CollateralFlag" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityCode" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityCodeType" Type="varchar" MaxLength="100" />
+          <Property Name="Ticker" Type="varchar" MaxLength="100" />
+          <Property Name="InHouseReference" Type="varchar" MaxLength="100" />
+          <Property Name="Quick" Type="varchar" MaxLength="100" />
+          <Property Name="Sedol" Type="varchar" MaxLength="100" />
+          <Property Name="Cusip" Type="varchar" MaxLength="100" />
+          <Property Name="Reuter" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityClass" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityIssuerName" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityDescription" Type="varchar" MaxLength="200" />
+          <Property Name="BondIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="LoanValue" Type="float" />
+          <Property Name="LoanCurrency" Type="varchar" MaxLength="100" />
+          <Property Name="Quantity" Type="float" />
+          <Property Name="TradeReference" Type="varchar" MaxLength="100" />
+          <Property Name="Rate" Type="float" />
+          <Property Name="DayIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="TradeDate" Type="datetime" />
+          <Property Name="SecuritySettlementDate" Type="datetime" />
+          <Property Name="CashSettlementDate" Type="datetime" />
+          <Property Name="SecuritySettlementMode" Type="varchar" MaxLength="100" />
+          <Property Name="CashSettlementMode" Type="varchar" MaxLength="100" />
+          <Property Name="TermDate" Type="datetime" />
+          <Property Name="DvpIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="CallableIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="Finder" Type="varchar" MaxLength="100" />
+          <Property Name="FinderRate" Type="float" />
+          <Property Name="NetDividendPercentage" Type="float" />
+          <Property Name="Collateral" Type="float" />
+          <Property Name="CollateralTypeIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="Dealer" Type="varchar" MaxLength="100" />
+          <Property Name="OverseasTaxPercentage" Type="float" />
+          <Property Name="DomesticTaxPercentage" Type="float" />
+          <Property Name="InternalComment" Type="varchar" MaxLength="100" />
+          <Property Name="ExternalComment" Type="varchar" MaxLength="100" />
+          <Property Name="TransactionType" Type="varchar" MaxLength="100" />
+          <Property Name="FundIdentifier" Type="varchar" MaxLength="100" />
+          <Property Name="FundMajor" Type="varchar" MaxLength="100" />
+          <Property Name="OutstandingPendingIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="LoanReturnIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="SettledFlag" Type="varchar" MaxLength="100" />
+          <Property Name="PrePaymentRate" Type="float" />
+          <Property Name="OwnSecurityClearerCode" Type="varchar" MaxLength="100" />
+          <Property Name="OwnCashClearerCode" Type="varchar" MaxLength="100" />
+          <Property Name="CounterpartySecurityClearerCode" Type="varchar" MaxLength="100" />
+          <Property Name="CounterpartyCashClearerCode" Type="varchar" MaxLength="100" />
+          <Property Name="AccruedInterest" Type="float" />
+          <Property Name="MarketValue" Type="float" />
+          <Property Name="TradeCategory" Type="varchar" MaxLength="100" />
+          <Property Name="LinkReference" Type="varchar" MaxLength="100" />
+          <Property Name="MinimumFee" Type="float" />
+          <Property Name="MinimumFeeCurrency" Type="varchar" MaxLength="100" />
+          <Property Name="ActivtyDate" Type="datetime" />
+          <Property Name="Currency" Type="varchar" MaxLength="100" />
+          <Property Name="FailCode" Type="varchar" MaxLength="100" />
+          <Property Name="InitialLoanValue" Type="float" />
+          <Property Name="InitialQuantity" Type="float" />
+          <Property Name="CounterpartyCrossReference" Type="varchar" MaxLength="100" />
+          <Property Name="Isin" Type="varchar" MaxLength="100" />
+          <Property Name="FundCrossReference" Type="varchar" MaxLength="100" />
+          <Property Name="RecalledIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="IntercompanyReference" Type="varchar" MaxLength="100" />
+          <Property Name="LocationCode" Type="varchar" MaxLength="100" />
+          <Property Name="LocationCrossReference" Type="varchar" MaxLength="100" />
+          <Property Name="RepoTypeTrade" Type="varchar" MaxLength="100" />
+          <Property Name="MonthlyBilling" Type="varchar" MaxLength="100" />
+          <Property Name="TotalAccrual" Type="float" />
+          <Property Name="TotalAccrualToDate" Type="float" />
+          <Property Name="TotalPaidToDate" Type="float" />
+          <Property Name="AssociatedTransaction" Type="varchar" MaxLength="100" />
+          <Property Name="CouponAccrualdays" Type="float" />
+          <Property Name="OCPTY_SWIFT" Type="varchar" MaxLength="100" />
+          <Property Name="OC_SWIFT" Type="varchar" MaxLength="100" />
+          <Property Name="OC_ACCNR" Type="varchar" MaxLength="100" />
+          <Property Name="OC_SUBACC" Type="varchar" MaxLength="100" />
+          <Property Name="OC_ACCREF" Type="varchar" MaxLength="100" />
+          <Property Name="OC_CONTACT" Type="varchar" MaxLength="100" />
+          <Property Name="OC_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="OS_SWIFT" Type="varchar" MaxLength="100" />
+          <Property Name="OS_ACCNR" Type="varchar" MaxLength="100" />
+          <Property Name="OS_SUBACC" Type="varchar" MaxLength="100" />
+          <Property Name="OS_ACCREF" Type="varchar" MaxLength="100" />
+          <Property Name="OS_CONTACT" Type="varchar" MaxLength="100" />
+          <Property Name="OS_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="CC_SWIFT" Type="varchar" MaxLength="100" />
+          <Property Name="CC_ACCNR" Type="varchar" MaxLength="100" />
+          <Property Name="CC_SUBACC" Type="varchar" MaxLength="100" />
+          <Property Name="CC_ACCREF" Type="varchar" MaxLength="100" />
+          <Property Name="CC_CONTACT" Type="varchar" MaxLength="100" />
+          <Property Name="CC_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="CS_SWIFT" Type="varchar" MaxLength="100" />
+          <Property Name="CS_ACCNR" Type="varchar" MaxLength="100" />
+          <Property Name="CS_SUBACC" Type="varchar" MaxLength="100" />
+          <Property Name="CS_ACCREF" Type="varchar" MaxLength="100" />
+          <Property Name="CS_CONTACT" Type="varchar" MaxLength="100" />
+          <Property Name="CS_NAME" Type="varchar" MaxLength="100" />
+          <Property Name="SettlementInstructionRequiredIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="NonCashCollateralHaircutPercentage" Type="float" />
+          <Property Name="MarketValueInLoanCurrency" Type="float" />
+          <Property Name="RateSign" Type="varchar" MaxLength="100" />
+          <Property Name="FinderFeeSign" Type="varchar" MaxLength="100" />
+          <Property Name="PrepaymentRateSign" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityClassCrossReference" Type="varchar" MaxLength="100" />
+          <Property Name="AutoSettledIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="OldPrice" Type="float" />
+          <Property Name="NewPrice" Type="float" />
+          <Property Name="EffectiveDate" Type="datetime" />
+          <Property Name="PayableReceivableIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="TimeOfMarkQuantity" Type="float" />
+          <Property Name="TimeOfMarkFundQuantity" Type="float" />
+          <Property Name="AccruedInterestOnMark" Type="float" />
+          <Property Name="AccruedInterestPayReceive" Type="varchar" MaxLength="100" />
+          <Property Name="ExposureMarginPercentage" Type="float" />
+          <Property Name="ReturnPresentOnTrade" Type="varchar" MaxLength="100" />
+          <Property Name="CRS_CGO_RIDS" Type="varchar" MaxLength="255" />
+          <Property Name="QTY_2DP" Type="float" />
+          <Property Name="INIT_QTY_2DP" Type="float" />
+          <Property Name="QTY_TM_MRK_2DP" Type="float" />
+          <Property Name="FND_QTY_TM_M_2DP" Type="float" />
+          <Property Name="SecurityCountryOfIssue" Type="varchar" MaxLength="100" />
+          <Property Name="RedenominationFlag" Type="varchar" MaxLength="100" />
+          <Property Name="InternalCommentLine2" Type="varchar" MaxLength="100" />
+          <Property Name="FromRepo" Type="varchar" MaxLength="100" />
+          <Property Name="ToRepo" Type="varchar" MaxLength="100" />
+          <Property Name="UniqueTradeReference" Type="float" />
+          <Property Name="FundMajorCrossReference" Type="varchar" MaxLength="100" />
+          <Property Name="OwnContractReference" Type="varchar" MaxLength="100" />
+          <Property Name="AuthorizationRequired" Type="varchar" MaxLength="100" />
+          <Property Name="CashBulkReference" Type="float" />
+          <Property Name="SecurityBulkReference" Type="float" />
+          <Property Name="HK_STMP_DT" Type="datetime" />
+          <Property Name="HK_STMP_DUTY" Type="varchar" MaxLength="100" />
+          <Property Name="HK_STMP_VAL" Type="float" />
+          <Property Name="CounterpartyInternalReference" Type="varchar" MaxLength="100" />
+          <Property Name="Price" Type="float" />
+          <Property Name="LastDividendExDate" Type="datetime" />
+          <Property Name="LastDividendPayDate" Type="datetime" />
+          <Property Name="LastDividendRecordDate" Type="datetime" />
+          <Property Name="LastDividendGross" Type="varchar" MaxLength="100" />
+          <Property Name="LastDividendNet" Type="varchar" MaxLength="100" />
+          <Property Name="LastDividendCurrency" Type="varchar" MaxLength="100" />
+          <Property Name="LastDividendExchangeRate" Type="float" />
+          <Property Name="FXT_TR_CST" Type="float" />
+          <Property Name="SPREAD" Type="float" />
+          <Property Name="SIZE" Type="float" />
+          <Property Name="MAX_SHS_PDY" Type="float" />
+          <Property Name="WK_CLNT_ID" Type="varchar" MaxLength="100" />
+          <Property Name="RATING_TYPE" Type="varchar" MaxLength="100" />
+          <Property Name="RATING" Type="varchar" MaxLength="100" />
+          <Property Name="DEF_PROB_1YR" Type="float" />
+          <Property Name="DEF_PROB_2YR" Type="float" />
+          <Property Name="DEF_PROB_3YR" Type="float" />
+          <Property Name="DEF_PROB_4YR" Type="float" />
+          <Property Name="DEF_PROB_5YR" Type="float" />
+          <Property Name="DEF_PROB_6YR" Type="float" />
+          <Property Name="DEF_PROB_7YR" Type="float" />
+          <Property Name="DEF_PROB_8YR" Type="float" />
+          <Property Name="DEF_PROB_9YR" Type="float" />
+          <Property Name="DEF_PROB_10Y" Type="float" />
+          <Property Name="SIZE_TYPE" Type="float" />
+          <Property Name="SECTOR" Type="varchar" MaxLength="100" />
+          <Property Name="F_GEN_REL" Type="varchar" MaxLength="100" />
+          <Property Name="C_GEN_REL" Type="varchar" MaxLength="100" />
+          <Property Name="NoMarkTradeIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="ExternalCommentLine2" Type="varchar" MaxLength="100" />
+          <Property Name="MatchedTradeIndicator" Type="varchar" MaxLength="100" />
+          <Property Name="LoanCurrencyExchangeRate" Type="float" />
+          <Property Name="SecurityCurrencyExchangeRate" Type="float" />
+          <Property Name="RequiredNonCashCollateralMargin" Type="float" />
+          <Property Name="LoanetBatchCode" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetDividendTracking" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetMarkEligibility" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetCallbackRequired" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetNonCashCollateralType" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetProfitCenter" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetDtcReasonCode" Type="varchar" MaxLength="100" />
+          <Property Name="LoanetDeliveryCode" Type="varchar" MaxLength="100" />
+          <Property Name="LimSentFlag" Type="varchar" MaxLength="100" />
+          <Property Name="LenderCollateralGrouping" Type="varchar" MaxLength="100" />
+          <Property Name="CashWashValue" Type="float" />
+          <Property Name="CashWashCurrency" Type="varchar" MaxLength="100" />
+          <Property Name="AgencyShareType" Type="varchar" MaxLength="100" />
+          <Property Name="AgencyReference" Type="varchar" MaxLength="100" />
+          <Property Name="AgencyPrice" Type="float" />
+          <Property Name="AgencyPriority" Type="float" />
+          <Property Name="AgencyCommentsLine1" Type="varchar" MaxLength="100" />
+          <Property Name="AgencyCommentsLine2" Type="varchar" MaxLength="100" />
+          <Property Name="CashPoolValue" Type="float" />
+          <Property Name="LoanPrice" Type="float" />
+          <Property Name="MarketPrice" Type="float" />
+          <Property Name="MatchedDefaultVehicle" Type="varchar" MaxLength="100" />
+          <Property Name="TradeInputTime" Type="varchar" MaxLength="100" />
+          <Property Name="RepoType" Type="varchar" MaxLength="100" />
+          <Property Name="MinimumFeeType" Type="varchar" MaxLength="100" />
+          <Property Name="MinimumFeeValueCurrency" Type="varchar" MaxLength="100" />
+          <Property Name="MinimumFeeValue" Type="float" />
+          <Property Name="FundName" Type="varchar" MaxLength="100" />
+          <Property Name="ArrangementFee" Type="float" />
+          <Property Name="BulkCashPoolCode" Type="varchar" MaxLength="100" />
+          <Property Name="SecurityBridgeMode" Type="varchar" MaxLength="100" />
+          <Property Name="CashBridgeMode" Type="varchar" MaxLength="100" />
+          <Property Name="SecuritySettlementDueDate" Type="datetime" />
+          <Property Name="CashSettlementDueDate" Type="datetime" />
+          <Property Name="MarketPriceInTradeCurrency" Type="float" />
+          <Property Name="FundAllocationDate" Type="datetime" />
+          <Property Name="GtfReference" Type="varchar" MaxLength="100" />
+          <Property Name="ForwardDateReallocationFlag" Type="varchar" MaxLength="100" />
+          <Property Name="REPO_MAT" Type="varchar" MaxLength="100" />
+          <Property Name="CP_COLL_VAL" Type="float" />
+          <Property Name="MBS_PAYDOWN" Type="varchar" MaxLength="100" />
+          <Property Name="ORIG_FACE" Type="float" />
+          <Property Name="CUR_STK_FACT" Type="float" />
+          <Property Name="PREV_STK_FAC" Type="float" />
+          <Property Name="CUR_TRD_FACT" Type="float" />
+          <Property Name="CUR_FACT_REC" Type="datetime" />
+          <Property Name="CUR_FACT_EX" Type="datetime" />
+          <Property Name="CUR_FACT_PAY" Type="datetime" />
+          <Property Name="FIN_RTN_FLAG" Type="varchar" MaxLength="100" />
+          <Property Name="PND_CNC_FLG" Type="varchar" MaxLength="100" />
+          <Property Name="G1PositionId" Type="int" />
+          <Property Name="G1PositionLoadFileId" Type="int" />
+          <Property Name="TradeRef" Type="varchar" MaxLength="100" />
+        </EntityType>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="SlateModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="SlateEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pledges" EntityType="SlateModel.Pledge" />
+          <EntitySet Name="StartingPositionViews" EntityType="SlateModel.StartingPositionView" />
+        </EntityContainer>
+        <EntityType Name="Pledge">
+          <Key>
+            <PropertyRef Name="PledgeId" />
+          </Key>
+          <Property Name="PledgeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PledgeType" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="G1Id" Type="Int32" />
+          <Property Name="G1TradeRef" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DtcId" Type="Int32" />
+          <Property Name="DtcMessageId" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Source" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateEntered" Type="DateTime" Nullable="false" />
+          <Property Name="EnteredBy" Type="String" Nullable="false" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="Processed" Type="Boolean" Nullable="false" />
+          <Property Name="SendToG1" Type="Boolean" Nullable="false" />
+          <Property Name="SendToDtc" Type="Boolean" Nullable="false" />
+          <Property Name="DateSentToG1" Type="DateTime" />
+          <Property Name="DateSentToDtc" Type="DateTime" />
+          <Property Name="DateConfirmedFromG1" Type="DateTime" />
+          <Property Name="DateResponseConfirmedFromDtc" Type="DateTime" />
+          <Property Name="DateConfirmedFromDtc" Type="DateTime" />
+          <Property Name="ClearingNo" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Cusip" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="Ticker" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Int32" Nullable="false" />
+          <Property Name="LoanValue" Type="Double" Nullable="false" />
+          <Property Name="Pledgor" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Pledgee" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="G1ResponseCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DtcResponseCode" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="G1Response" Type="String" MaxLength="350" Unicode="false" FixedLength="false" />
+          <Property Name="DtcResponse" Type="String" MaxLength="500" Unicode="false" FixedLength="false" />
+          <Property Name="DtcStatusCode" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="StartingPositionView">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Type="Int32" Name="Id" Nullable="false" />
+          <Property Type="DateTime" Name="DateInserted" />
+          <Property Type="DateTime" Name="LoadDate" />
+          <Property Type="DateTime" Name="FileDate" />
+          <Property Type="String" Name="ClearingNo" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Book" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartyCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartyName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartyMajor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BorrowLoanIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CollateralFlag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityCodeType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Ticker" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InHouseReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Quick" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Sedol" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Cusip" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Reuter" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityClass" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityIssuerName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityDescription" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="BondIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="LoanValue" />
+          <Property Type="String" Name="LoanCurrency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Quantity" />
+          <Property Type="String" Name="TradeReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Rate" />
+          <Property Type="String" Name="DayIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TradeDate" />
+          <Property Type="DateTime" Name="SecuritySettlementDate" />
+          <Property Type="DateTime" Name="CashSettlementDate" />
+          <Property Type="String" Name="SecuritySettlementMode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CashSettlementMode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="TermDate" />
+          <Property Type="String" Name="DvpIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CallableIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Finder" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="FinderRate" />
+          <Property Type="Double" Name="NetDividendPercentage" />
+          <Property Type="Double" Name="Collateral" />
+          <Property Type="String" Name="CollateralTypeIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Dealer" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="OverseasTaxPercentage" />
+          <Property Type="Double" Name="DomesticTaxPercentage" />
+          <Property Type="String" Name="InternalComment" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ExternalComment" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TransactionType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FundIdentifier" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FundMajor" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OutstandingPendingIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanReturnIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SettledFlag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="PrePaymentRate" />
+          <Property Type="String" Name="OwnSecurityClearerCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnCashClearerCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartySecurityClearerCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CounterpartyCashClearerCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="AccruedInterest" />
+          <Property Type="Double" Name="MarketValue" />
+          <Property Type="String" Name="TradeCategory" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LinkReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="MinimumFee" />
+          <Property Type="String" Name="MinimumFeeCurrency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="ActivtyDate" />
+          <Property Type="String" Name="Currency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FailCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="InitialLoanValue" />
+          <Property Type="Double" Name="InitialQuantity" />
+          <Property Type="String" Name="CounterpartyCrossReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="Isin" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FundCrossReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RecalledIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="IntercompanyReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocationCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LocationCrossReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RepoTypeTrade" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MonthlyBilling" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="TotalAccrual" />
+          <Property Type="Double" Name="TotalAccrualToDate" />
+          <Property Type="Double" Name="TotalPaidToDate" />
+          <Property Type="String" Name="AssociatedTransaction" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="CouponAccrualdays" />
+          <Property Type="String" Name="OCPTY_SWIFT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_SWIFT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_ACCNR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_SUBACC" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_ACCREF" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_CONTACT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OC_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_SWIFT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_ACCNR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_SUBACC" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_ACCREF" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_CONTACT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OS_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_SWIFT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_ACCNR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_SUBACC" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_ACCREF" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_CONTACT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CC_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_SWIFT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_ACCNR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_SUBACC" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_ACCREF" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_CONTACT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CS_NAME" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SettlementInstructionRequiredIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="NonCashCollateralHaircutPercentage" />
+          <Property Type="Double" Name="MarketValueInLoanCurrency" />
+          <Property Type="String" Name="RateSign" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FinderFeeSign" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PrepaymentRateSign" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityClassCrossReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AutoSettledIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="OldPrice" />
+          <Property Type="Double" Name="NewPrice" />
+          <Property Type="DateTime" Name="EffectiveDate" />
+          <Property Type="String" Name="PayableReceivableIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="TimeOfMarkQuantity" />
+          <Property Type="Double" Name="TimeOfMarkFundQuantity" />
+          <Property Type="Double" Name="AccruedInterestOnMark" />
+          <Property Type="String" Name="AccruedInterestPayReceive" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="ExposureMarginPercentage" />
+          <Property Type="String" Name="ReturnPresentOnTrade" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CRS_CGO_RIDS" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="QTY_2DP" />
+          <Property Type="Double" Name="INIT_QTY_2DP" />
+          <Property Type="Double" Name="QTY_TM_MRK_2DP" />
+          <Property Type="Double" Name="FND_QTY_TM_M_2DP" />
+          <Property Type="String" Name="SecurityCountryOfIssue" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RedenominationFlag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="InternalCommentLine2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="FromRepo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ToRepo" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="UniqueTradeReference" />
+          <Property Type="String" Name="FundMajorCrossReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="OwnContractReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AuthorizationRequired" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="CashBulkReference" />
+          <Property Type="Double" Name="SecurityBulkReference" />
+          <Property Type="DateTime" Name="HK_STMP_DT" />
+          <Property Type="String" Name="HK_STMP_DUTY" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="HK_STMP_VAL" />
+          <Property Type="String" Name="CounterpartyInternalReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="Price" />
+          <Property Type="DateTime" Name="LastDividendExDate" />
+          <Property Type="DateTime" Name="LastDividendPayDate" />
+          <Property Type="DateTime" Name="LastDividendRecordDate" />
+          <Property Type="String" Name="LastDividendGross" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastDividendNet" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LastDividendCurrency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="LastDividendExchangeRate" />
+          <Property Type="Double" Name="FXT_TR_CST" />
+          <Property Type="Double" Name="SPREAD" />
+          <Property Type="Double" Name="SIZE" />
+          <Property Type="Double" Name="MAX_SHS_PDY" />
+          <Property Type="String" Name="WK_CLNT_ID" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RATING_TYPE" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RATING" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="DEF_PROB_1YR" />
+          <Property Type="Double" Name="DEF_PROB_2YR" />
+          <Property Type="Double" Name="DEF_PROB_3YR" />
+          <Property Type="Double" Name="DEF_PROB_4YR" />
+          <Property Type="Double" Name="DEF_PROB_5YR" />
+          <Property Type="Double" Name="DEF_PROB_6YR" />
+          <Property Type="Double" Name="DEF_PROB_7YR" />
+          <Property Type="Double" Name="DEF_PROB_8YR" />
+          <Property Type="Double" Name="DEF_PROB_9YR" />
+          <Property Type="Double" Name="DEF_PROB_10Y" />
+          <Property Type="Double" Name="SIZE_TYPE" />
+          <Property Type="String" Name="SECTOR" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="F_GEN_REL" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="C_GEN_REL" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="NoMarkTradeIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ExternalCommentLine2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MatchedTradeIndicator" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="LoanCurrencyExchangeRate" />
+          <Property Type="Double" Name="SecurityCurrencyExchangeRate" />
+          <Property Type="Double" Name="RequiredNonCashCollateralMargin" />
+          <Property Type="String" Name="LoanetBatchCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetDividendTracking" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetMarkEligibility" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetCallbackRequired" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetNonCashCollateralType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetProfitCenter" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetDtcReasonCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LoanetDeliveryCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LimSentFlag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="LenderCollateralGrouping" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="CashWashValue" />
+          <Property Type="String" Name="CashWashCurrency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AgencyShareType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AgencyReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="AgencyPrice" />
+          <Property Type="Double" Name="AgencyPriority" />
+          <Property Type="String" Name="AgencyCommentsLine1" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="AgencyCommentsLine2" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="CashPoolValue" />
+          <Property Type="Double" Name="LoanPrice" />
+          <Property Type="Double" Name="MarketPrice" />
+          <Property Type="String" Name="MatchedDefaultVehicle" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="TradeInputTime" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="RepoType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MinimumFeeType" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="MinimumFeeValueCurrency" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="MinimumFeeValue" />
+          <Property Type="String" Name="FundName" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="ArrangementFee" />
+          <Property Type="String" Name="BulkCashPoolCode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="SecurityBridgeMode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="CashBridgeMode" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="DateTime" Name="SecuritySettlementDueDate" />
+          <Property Type="DateTime" Name="CashSettlementDueDate" />
+          <Property Type="Double" Name="MarketPriceInTradeCurrency" />
+          <Property Type="DateTime" Name="FundAllocationDate" />
+          <Property Type="String" Name="GtfReference" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="ForwardDateReallocationFlag" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="REPO_MAT" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="CP_COLL_VAL" />
+          <Property Type="String" Name="MBS_PAYDOWN" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Double" Name="ORIG_FACE" />
+          <Property Type="Double" Name="CUR_STK_FACT" />
+          <Property Type="Double" Name="PREV_STK_FAC" />
+          <Property Type="Double" Name="CUR_TRD_FACT" />
+          <Property Type="DateTime" Name="CUR_FACT_REC" />
+          <Property Type="DateTime" Name="CUR_FACT_EX" />
+          <Property Type="DateTime" Name="CUR_FACT_PAY" />
+          <Property Type="String" Name="FIN_RTN_FLAG" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="String" Name="PND_CNC_FLG" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Type="Int32" Name="G1PositionId" />
+          <Property Type="Int32" Name="G1PositionLoadFileId" />
+          <Property Type="String" Name="TradeRef" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="SlateModelStoreContainer" CdmEntityContainer="SlateEntities">
+          <EntitySetMapping Name="Pledges"><EntityTypeMapping TypeName="SlateModel.Pledge"><MappingFragment StoreEntitySet="Pledge">
+            <ScalarProperty Name="PledgeId" ColumnName="PledgeId" />
+            <ScalarProperty Name="PledgeType" ColumnName="PledgeType" />
+            <ScalarProperty Name="G1Id" ColumnName="G1Id" />
+            <ScalarProperty Name="G1TradeRef" ColumnName="G1TradeRef" />
+            <ScalarProperty Name="DtcId" ColumnName="DtcId" />
+            <ScalarProperty Name="DtcMessageId" ColumnName="DtcMessageId" />
+            <ScalarProperty Name="Source" ColumnName="Source" />
+            <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+            <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+            <ScalarProperty Name="Processed" ColumnName="Processed" />
+            <ScalarProperty Name="SendToG1" ColumnName="SendToG1" />
+            <ScalarProperty Name="SendToDtc" ColumnName="SendToDtc" />
+            <ScalarProperty Name="DateSentToG1" ColumnName="DateSentToG1" />
+            <ScalarProperty Name="DateSentToDtc" ColumnName="DateSentToDtc" />
+            <ScalarProperty Name="DateConfirmedFromG1" ColumnName="DateConfirmedFromG1" />
+            <ScalarProperty Name="DateResponseConfirmedFromDtc" ColumnName="DateResponseConfirmedFromDtc" />
+            <ScalarProperty Name="DateConfirmedFromDtc" ColumnName="DateConfirmedFromDtc" />
+            <ScalarProperty Name="ClearingNo" ColumnName="ClearingNo" />
+            <ScalarProperty Name="Cusip" ColumnName="Cusip" />
+            <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+            <ScalarProperty Name="LoanValue" ColumnName="LoanValue" />
+            <ScalarProperty Name="Pledgor" ColumnName="Pledgor" />
+            <ScalarProperty Name="Pledgee" ColumnName="Pledgee" />
+            <ScalarProperty Name="G1ResponseCode" ColumnName="G1ResponseCode" />
+            <ScalarProperty Name="DtcResponseCode" ColumnName="DtcResponseCode" />
+            <ScalarProperty Name="G1Response" ColumnName="G1Response" />
+            <ScalarProperty Name="DtcResponse" ColumnName="DtcResponse" />
+            <ScalarProperty Name="DtcStatusCode" ColumnName="DtcStatusCode" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="StartingPositionViews">
+            <EntityTypeMapping TypeName="SlateModel.StartingPositionView">
+              <MappingFragment StoreEntitySet="StartingPositionView">
+                <ScalarProperty Name="TradeRef" ColumnName="TradeRef" />
+                <ScalarProperty Name="G1PositionLoadFileId" ColumnName="G1PositionLoadFileId" />
+                <ScalarProperty Name="G1PositionId" ColumnName="G1PositionId" />
+                <ScalarProperty Name="PND_CNC_FLG" ColumnName="PND_CNC_FLG" />
+                <ScalarProperty Name="FIN_RTN_FLAG" ColumnName="FIN_RTN_FLAG" />
+                <ScalarProperty Name="CUR_FACT_PAY" ColumnName="CUR_FACT_PAY" />
+                <ScalarProperty Name="CUR_FACT_EX" ColumnName="CUR_FACT_EX" />
+                <ScalarProperty Name="CUR_FACT_REC" ColumnName="CUR_FACT_REC" />
+                <ScalarProperty Name="CUR_TRD_FACT" ColumnName="CUR_TRD_FACT" />
+                <ScalarProperty Name="PREV_STK_FAC" ColumnName="PREV_STK_FAC" />
+                <ScalarProperty Name="CUR_STK_FACT" ColumnName="CUR_STK_FACT" />
+                <ScalarProperty Name="ORIG_FACE" ColumnName="ORIG_FACE" />
+                <ScalarProperty Name="MBS_PAYDOWN" ColumnName="MBS_PAYDOWN" />
+                <ScalarProperty Name="CP_COLL_VAL" ColumnName="CP_COLL_VAL" />
+                <ScalarProperty Name="REPO_MAT" ColumnName="REPO_MAT" />
+                <ScalarProperty Name="ForwardDateReallocationFlag" ColumnName="ForwardDateReallocationFlag" />
+                <ScalarProperty Name="GtfReference" ColumnName="GtfReference" />
+                <ScalarProperty Name="FundAllocationDate" ColumnName="FundAllocationDate" />
+                <ScalarProperty Name="MarketPriceInTradeCurrency" ColumnName="MarketPriceInTradeCurrency" />
+                <ScalarProperty Name="CashSettlementDueDate" ColumnName="CashSettlementDueDate" />
+                <ScalarProperty Name="SecuritySettlementDueDate" ColumnName="SecuritySettlementDueDate" />
+                <ScalarProperty Name="CashBridgeMode" ColumnName="CashBridgeMode" />
+                <ScalarProperty Name="SecurityBridgeMode" ColumnName="SecurityBridgeMode" />
+                <ScalarProperty Name="BulkCashPoolCode" ColumnName="BulkCashPoolCode" />
+                <ScalarProperty Name="ArrangementFee" ColumnName="ArrangementFee" />
+                <ScalarProperty Name="FundName" ColumnName="FundName" />
+                <ScalarProperty Name="MinimumFeeValue" ColumnName="MinimumFeeValue" />
+                <ScalarProperty Name="MinimumFeeValueCurrency" ColumnName="MinimumFeeValueCurrency" />
+                <ScalarProperty Name="MinimumFeeType" ColumnName="MinimumFeeType" />
+                <ScalarProperty Name="RepoType" ColumnName="RepoType" />
+                <ScalarProperty Name="TradeInputTime" ColumnName="TradeInputTime" />
+                <ScalarProperty Name="MatchedDefaultVehicle" ColumnName="MatchedDefaultVehicle" />
+                <ScalarProperty Name="MarketPrice" ColumnName="MarketPrice" />
+                <ScalarProperty Name="LoanPrice" ColumnName="LoanPrice" />
+                <ScalarProperty Name="CashPoolValue" ColumnName="CashPoolValue" />
+                <ScalarProperty Name="AgencyCommentsLine2" ColumnName="AgencyCommentsLine2" />
+                <ScalarProperty Name="AgencyCommentsLine1" ColumnName="AgencyCommentsLine1" />
+                <ScalarProperty Name="AgencyPriority" ColumnName="AgencyPriority" />
+                <ScalarProperty Name="AgencyPrice" ColumnName="AgencyPrice" />
+                <ScalarProperty Name="AgencyReference" ColumnName="AgencyReference" />
+                <ScalarProperty Name="AgencyShareType" ColumnName="AgencyShareType" />
+                <ScalarProperty Name="CashWashCurrency" ColumnName="CashWashCurrency" />
+                <ScalarProperty Name="CashWashValue" ColumnName="CashWashValue" />
+                <ScalarProperty Name="LenderCollateralGrouping" ColumnName="LenderCollateralGrouping" />
+                <ScalarProperty Name="LimSentFlag" ColumnName="LimSentFlag" />
+                <ScalarProperty Name="LoanetDeliveryCode" ColumnName="LoanetDeliveryCode" />
+                <ScalarProperty Name="LoanetDtcReasonCode" ColumnName="LoanetDtcReasonCode" />
+                <ScalarProperty Name="LoanetProfitCenter" ColumnName="LoanetProfitCenter" />
+                <ScalarProperty Name="LoanetNonCashCollateralType" ColumnName="LoanetNonCashCollateralType" />
+                <ScalarProperty Name="LoanetCallbackRequired" ColumnName="LoanetCallbackRequired" />
+                <ScalarProperty Name="LoanetMarkEligibility" ColumnName="LoanetMarkEligibility" />
+                <ScalarProperty Name="LoanetDividendTracking" ColumnName="LoanetDividendTracking" />
+                <ScalarProperty Name="LoanetBatchCode" ColumnName="LoanetBatchCode" />
+                <ScalarProperty Name="RequiredNonCashCollateralMargin" ColumnName="RequiredNonCashCollateralMargin" />
+                <ScalarProperty Name="SecurityCurrencyExchangeRate" ColumnName="SecurityCurrencyExchangeRate" />
+                <ScalarProperty Name="LoanCurrencyExchangeRate" ColumnName="LoanCurrencyExchangeRate" />
+                <ScalarProperty Name="MatchedTradeIndicator" ColumnName="MatchedTradeIndicator" />
+                <ScalarProperty Name="ExternalCommentLine2" ColumnName="ExternalCommentLine2" />
+                <ScalarProperty Name="NoMarkTradeIndicator" ColumnName="NoMarkTradeIndicator" />
+                <ScalarProperty Name="C_GEN_REL" ColumnName="C_GEN_REL" />
+                <ScalarProperty Name="F_GEN_REL" ColumnName="F_GEN_REL" />
+                <ScalarProperty Name="SECTOR" ColumnName="SECTOR" />
+                <ScalarProperty Name="SIZE_TYPE" ColumnName="SIZE_TYPE" />
+                <ScalarProperty Name="DEF_PROB_10Y" ColumnName="DEF_PROB_10Y" />
+                <ScalarProperty Name="DEF_PROB_9YR" ColumnName="DEF_PROB_9YR" />
+                <ScalarProperty Name="DEF_PROB_8YR" ColumnName="DEF_PROB_8YR" />
+                <ScalarProperty Name="DEF_PROB_7YR" ColumnName="DEF_PROB_7YR" />
+                <ScalarProperty Name="DEF_PROB_6YR" ColumnName="DEF_PROB_6YR" />
+                <ScalarProperty Name="DEF_PROB_5YR" ColumnName="DEF_PROB_5YR" />
+                <ScalarProperty Name="DEF_PROB_4YR" ColumnName="DEF_PROB_4YR" />
+                <ScalarProperty Name="DEF_PROB_3YR" ColumnName="DEF_PROB_3YR" />
+                <ScalarProperty Name="DEF_PROB_2YR" ColumnName="DEF_PROB_2YR" />
+                <ScalarProperty Name="DEF_PROB_1YR" ColumnName="DEF_PROB_1YR" />
+                <ScalarProperty Name="RATING" ColumnName="RATING" />
+                <ScalarProperty Name="RATING_TYPE" ColumnName="RATING_TYPE" />
+                <ScalarProperty Name="WK_CLNT_ID" ColumnName="WK_CLNT_ID" />
+                <ScalarProperty Name="MAX_SHS_PDY" ColumnName="MAX_SHS_PDY" />
+                <ScalarProperty Name="SIZE" ColumnName="SIZE" />
+                <ScalarProperty Name="SPREAD" ColumnName="SPREAD" />
+                <ScalarProperty Name="FXT_TR_CST" ColumnName="FXT_TR_CST" />
+                <ScalarProperty Name="LastDividendExchangeRate" ColumnName="LastDividendExchangeRate" />
+                <ScalarProperty Name="LastDividendCurrency" ColumnName="LastDividendCurrency" />
+                <ScalarProperty Name="LastDividendNet" ColumnName="LastDividendNet" />
+                <ScalarProperty Name="LastDividendGross" ColumnName="LastDividendGross" />
+                <ScalarProperty Name="LastDividendRecordDate" ColumnName="LastDividendRecordDate" />
+                <ScalarProperty Name="LastDividendPayDate" ColumnName="LastDividendPayDate" />
+                <ScalarProperty Name="LastDividendExDate" ColumnName="LastDividendExDate" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="CounterpartyInternalReference" ColumnName="CounterpartyInternalReference" />
+                <ScalarProperty Name="HK_STMP_VAL" ColumnName="HK_STMP_VAL" />
+                <ScalarProperty Name="HK_STMP_DUTY" ColumnName="HK_STMP_DUTY" />
+                <ScalarProperty Name="HK_STMP_DT" ColumnName="HK_STMP_DT" />
+                <ScalarProperty Name="SecurityBulkReference" ColumnName="SecurityBulkReference" />
+                <ScalarProperty Name="CashBulkReference" ColumnName="CashBulkReference" />
+                <ScalarProperty Name="AuthorizationRequired" ColumnName="AuthorizationRequired" />
+                <ScalarProperty Name="OwnContractReference" ColumnName="OwnContractReference" />
+                <ScalarProperty Name="FundMajorCrossReference" ColumnName="FundMajorCrossReference" />
+                <ScalarProperty Name="UniqueTradeReference" ColumnName="UniqueTradeReference" />
+                <ScalarProperty Name="ToRepo" ColumnName="ToRepo" />
+                <ScalarProperty Name="FromRepo" ColumnName="FromRepo" />
+                <ScalarProperty Name="InternalCommentLine2" ColumnName="InternalCommentLine2" />
+                <ScalarProperty Name="RedenominationFlag" ColumnName="RedenominationFlag" />
+                <ScalarProperty Name="SecurityCountryOfIssue" ColumnName="SecurityCountryOfIssue" />
+                <ScalarProperty Name="FND_QTY_TM_M_2DP" ColumnName="FND_QTY_TM_M_2DP" />
+                <ScalarProperty Name="QTY_TM_MRK_2DP" ColumnName="QTY_TM_MRK_2DP" />
+                <ScalarProperty Name="INIT_QTY_2DP" ColumnName="INIT_QTY_2DP" />
+                <ScalarProperty Name="QTY_2DP" ColumnName="QTY_2DP" />
+                <ScalarProperty Name="CRS_CGO_RIDS" ColumnName="CRS_CGO_RIDS" />
+                <ScalarProperty Name="ReturnPresentOnTrade" ColumnName="ReturnPresentOnTrade" />
+                <ScalarProperty Name="ExposureMarginPercentage" ColumnName="ExposureMarginPercentage" />
+                <ScalarProperty Name="AccruedInterestPayReceive" ColumnName="AccruedInterestPayReceive" />
+                <ScalarProperty Name="AccruedInterestOnMark" ColumnName="AccruedInterestOnMark" />
+                <ScalarProperty Name="TimeOfMarkFundQuantity" ColumnName="TimeOfMarkFundQuantity" />
+                <ScalarProperty Name="TimeOfMarkQuantity" ColumnName="TimeOfMarkQuantity" />
+                <ScalarProperty Name="PayableReceivableIndicator" ColumnName="PayableReceivableIndicator" />
+                <ScalarProperty Name="EffectiveDate" ColumnName="EffectiveDate" />
+                <ScalarProperty Name="NewPrice" ColumnName="NewPrice" />
+                <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+                <ScalarProperty Name="AutoSettledIndicator" ColumnName="AutoSettledIndicator" />
+                <ScalarProperty Name="SecurityClassCrossReference" ColumnName="SecurityClassCrossReference" />
+                <ScalarProperty Name="PrepaymentRateSign" ColumnName="PrepaymentRateSign" />
+                <ScalarProperty Name="FinderFeeSign" ColumnName="FinderFeeSign" />
+                <ScalarProperty Name="RateSign" ColumnName="RateSign" />
+                <ScalarProperty Name="MarketValueInLoanCurrency" ColumnName="MarketValueInLoanCurrency" />
+                <ScalarProperty Name="NonCashCollateralHaircutPercentage" ColumnName="NonCashCollateralHaircutPercentage" />
+                <ScalarProperty Name="SettlementInstructionRequiredIndicator" ColumnName="SettlementInstructionRequiredIndicator" />
+                <ScalarProperty Name="CS_NAME" ColumnName="CS_NAME" />
+                <ScalarProperty Name="CS_CONTACT" ColumnName="CS_CONTACT" />
+                <ScalarProperty Name="CS_ACCREF" ColumnName="CS_ACCREF" />
+                <ScalarProperty Name="CS_SUBACC" ColumnName="CS_SUBACC" />
+                <ScalarProperty Name="CS_ACCNR" ColumnName="CS_ACCNR" />
+                <ScalarProperty Name="CS_SWIFT" ColumnName="CS_SWIFT" />
+                <ScalarProperty Name="CC_NAME" ColumnName="CC_NAME" />
+                <ScalarProperty Name="CC_CONTACT" ColumnName="CC_CONTACT" />
+                <ScalarProperty Name="CC_ACCREF" ColumnName="CC_ACCREF" />
+                <ScalarProperty Name="CC_SUBACC" ColumnName="CC_SUBACC" />
+                <ScalarProperty Name="CC_ACCNR" ColumnName="CC_ACCNR" />
+                <ScalarProperty Name="CC_SWIFT" ColumnName="CC_SWIFT" />
+                <ScalarProperty Name="OS_NAME" ColumnName="OS_NAME" />
+                <ScalarProperty Name="OS_CONTACT" ColumnName="OS_CONTACT" />
+                <ScalarProperty Name="OS_ACCREF" ColumnName="OS_ACCREF" />
+                <ScalarProperty Name="OS_SUBACC" ColumnName="OS_SUBACC" />
+                <ScalarProperty Name="OS_ACCNR" ColumnName="OS_ACCNR" />
+                <ScalarProperty Name="OS_SWIFT" ColumnName="OS_SWIFT" />
+                <ScalarProperty Name="OC_NAME" ColumnName="OC_NAME" />
+                <ScalarProperty Name="OC_CONTACT" ColumnName="OC_CONTACT" />
+                <ScalarProperty Name="OC_ACCREF" ColumnName="OC_ACCREF" />
+                <ScalarProperty Name="OC_SUBACC" ColumnName="OC_SUBACC" />
+                <ScalarProperty Name="OC_ACCNR" ColumnName="OC_ACCNR" />
+                <ScalarProperty Name="OC_SWIFT" ColumnName="OC_SWIFT" />
+                <ScalarProperty Name="OCPTY_SWIFT" ColumnName="OCPTY_SWIFT" />
+                <ScalarProperty Name="CouponAccrualdays" ColumnName="CouponAccrualdays" />
+                <ScalarProperty Name="AssociatedTransaction" ColumnName="AssociatedTransaction" />
+                <ScalarProperty Name="TotalPaidToDate" ColumnName="TotalPaidToDate" />
+                <ScalarProperty Name="TotalAccrualToDate" ColumnName="TotalAccrualToDate" />
+                <ScalarProperty Name="TotalAccrual" ColumnName="TotalAccrual" />
+                <ScalarProperty Name="MonthlyBilling" ColumnName="MonthlyBilling" />
+                <ScalarProperty Name="RepoTypeTrade" ColumnName="RepoTypeTrade" />
+                <ScalarProperty Name="LocationCrossReference" ColumnName="LocationCrossReference" />
+                <ScalarProperty Name="LocationCode" ColumnName="LocationCode" />
+                <ScalarProperty Name="IntercompanyReference" ColumnName="IntercompanyReference" />
+                <ScalarProperty Name="RecalledIndicator" ColumnName="RecalledIndicator" />
+                <ScalarProperty Name="FundCrossReference" ColumnName="FundCrossReference" />
+                <ScalarProperty Name="Isin" ColumnName="Isin" />
+                <ScalarProperty Name="CounterpartyCrossReference" ColumnName="CounterpartyCrossReference" />
+                <ScalarProperty Name="InitialQuantity" ColumnName="InitialQuantity" />
+                <ScalarProperty Name="InitialLoanValue" ColumnName="InitialLoanValue" />
+                <ScalarProperty Name="FailCode" ColumnName="FailCode" />
+                <ScalarProperty Name="Currency" ColumnName="Currency" />
+                <ScalarProperty Name="ActivtyDate" ColumnName="ActivtyDate" />
+                <ScalarProperty Name="MinimumFeeCurrency" ColumnName="MinimumFeeCurrency" />
+                <ScalarProperty Name="MinimumFee" ColumnName="MinimumFee" />
+                <ScalarProperty Name="LinkReference" ColumnName="LinkReference" />
+                <ScalarProperty Name="TradeCategory" ColumnName="TradeCategory" />
+                <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+                <ScalarProperty Name="AccruedInterest" ColumnName="AccruedInterest" />
+                <ScalarProperty Name="CounterpartyCashClearerCode" ColumnName="CounterpartyCashClearerCode" />
+                <ScalarProperty Name="CounterpartySecurityClearerCode" ColumnName="CounterpartySecurityClearerCode" />
+                <ScalarProperty Name="OwnCashClearerCode" ColumnName="OwnCashClearerCode" />
+                <ScalarProperty Name="OwnSecurityClearerCode" ColumnName="OwnSecurityClearerCode" />
+                <ScalarProperty Name="PrePaymentRate" ColumnName="PrePaymentRate" />
+                <ScalarProperty Name="SettledFlag" ColumnName="SettledFlag" />
+                <ScalarProperty Name="LoanReturnIndicator" ColumnName="LoanReturnIndicator" />
+                <ScalarProperty Name="OutstandingPendingIndicator" ColumnName="OutstandingPendingIndicator" />
+                <ScalarProperty Name="FundMajor" ColumnName="FundMajor" />
+                <ScalarProperty Name="FundIdentifier" ColumnName="FundIdentifier" />
+                <ScalarProperty Name="TransactionType" ColumnName="TransactionType" />
+                <ScalarProperty Name="ExternalComment" ColumnName="ExternalComment" />
+                <ScalarProperty Name="InternalComment" ColumnName="InternalComment" />
+                <ScalarProperty Name="DomesticTaxPercentage" ColumnName="DomesticTaxPercentage" />
+                <ScalarProperty Name="OverseasTaxPercentage" ColumnName="OverseasTaxPercentage" />
+                <ScalarProperty Name="Dealer" ColumnName="Dealer" />
+                <ScalarProperty Name="CollateralTypeIndicator" ColumnName="CollateralTypeIndicator" />
+                <ScalarProperty Name="Collateral" ColumnName="Collateral" />
+                <ScalarProperty Name="NetDividendPercentage" ColumnName="NetDividendPercentage" />
+                <ScalarProperty Name="FinderRate" ColumnName="FinderRate" />
+                <ScalarProperty Name="Finder" ColumnName="Finder" />
+                <ScalarProperty Name="CallableIndicator" ColumnName="CallableIndicator" />
+                <ScalarProperty Name="DvpIndicator" ColumnName="DvpIndicator" />
+                <ScalarProperty Name="TermDate" ColumnName="TermDate" />
+                <ScalarProperty Name="CashSettlementMode" ColumnName="CashSettlementMode" />
+                <ScalarProperty Name="SecuritySettlementMode" ColumnName="SecuritySettlementMode" />
+                <ScalarProperty Name="CashSettlementDate" ColumnName="CashSettlementDate" />
+                <ScalarProperty Name="SecuritySettlementDate" ColumnName="SecuritySettlementDate" />
+                <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+                <ScalarProperty Name="DayIndicator" ColumnName="DayIndicator" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="TradeReference" ColumnName="TradeReference" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="LoanCurrency" ColumnName="LoanCurrency" />
+                <ScalarProperty Name="LoanValue" ColumnName="LoanValue" />
+                <ScalarProperty Name="BondIndicator" ColumnName="BondIndicator" />
+                <ScalarProperty Name="SecurityDescription" ColumnName="SecurityDescription" />
+                <ScalarProperty Name="SecurityIssuerName" ColumnName="SecurityIssuerName" />
+                <ScalarProperty Name="SecurityClass" ColumnName="SecurityClass" />
+                <ScalarProperty Name="Reuter" ColumnName="Reuter" />
+                <ScalarProperty Name="Cusip" ColumnName="Cusip" />
+                <ScalarProperty Name="Sedol" ColumnName="Sedol" />
+                <ScalarProperty Name="Quick" ColumnName="Quick" />
+                <ScalarProperty Name="InHouseReference" ColumnName="InHouseReference" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="SecurityCodeType" ColumnName="SecurityCodeType" />
+                <ScalarProperty Name="SecurityCode" ColumnName="SecurityCode" />
+                <ScalarProperty Name="CollateralFlag" ColumnName="CollateralFlag" />
+                <ScalarProperty Name="BorrowLoanIndicator" ColumnName="BorrowLoanIndicator" />
+                <ScalarProperty Name="CounterpartyMajor" ColumnName="CounterpartyMajor" />
+                <ScalarProperty Name="CounterpartyName" ColumnName="CounterpartyName" />
+                <ScalarProperty Name="CounterpartyCode" ColumnName="CounterpartyCode" />
+                <ScalarProperty Name="Book" ColumnName="Book" />
+                <ScalarProperty Name="ClearingNo" ColumnName="ClearingNo" />
+                <ScalarProperty Name="FileDate" ColumnName="FileDate" />
+                <ScalarProperty Name="LoadDate" ColumnName="LoadDate" />
+                <ScalarProperty Name="DateInserted" ColumnName="DateInserted" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Blob.Slate">
+        <EntityTypeShape EntityType="SlateModel.Pledge" Width="1.5" PointX="0.75" PointY="0.75" Height="5.7009895833333326" IsExpanded="true" />
+        <EntityTypeShape EntityType="SlateModel.StartingPositionView" Width="1.5" PointX="3.375" PointY="0.75" Height="39.392192382812496" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

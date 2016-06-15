@@ -1,0 +1,31 @@
+﻿<UserControl x:Class="Pledger.View.ManualPledgeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" 
+             d:DesignHeight="400" d:DesignWidth="500">
+    <Grid Name="DGArea">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45" />
+            <RowDefinition Height="1*" />
+            
+        </Grid.RowDefinitions>
+
+        <DataGrid AutoGenerateColumns="True" Grid.Row="1" Margin="12,0,12,12" Name="dgvManualPledgeUnpledge" IsReadOnly="True">
+            
+            <!-- AlternatingRowBackground="LightBlue" GridLinesVisibility="None" RowHeaderWidth="0" -->
+            <!--
+            <DataGrid.Resources>
+                <Style TargetType="{x:Type DataGridColumnHeader}">
+                    <Setter Property="Background" Value="white" />
+                    <Setter Property="FontWeight" Value="Bold" />
+                    <Setter Property="Padding" Value="5" />
+                </Style>
+            </DataGrid.Resources>
+            -->
+        </DataGrid>
+
+        <Button Name="btnRefreshManualPledgeUnpledge" Command="{Binding RefreshManualPledgeUnpledgeCommand}" Content="Refresh" Height="23" HorizontalAlignment="Left" Margin="12,12,0,0" VerticalAlignment="Top" Width="75" />
+    </Grid>
+</UserControl>

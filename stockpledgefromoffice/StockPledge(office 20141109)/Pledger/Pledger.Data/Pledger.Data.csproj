@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C55DEA20-EA24-477C-8226-E99F8454CD0F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pledger.Data</RootNamespace>
+    <AssemblyName>Pledger.Data</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="OCCStockPledge.cs" />
+    <Compile Include="OCCStockToUnpledge.cs" />
+    <Compile Include="PledgeProcessor.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Apex\ApexFileCreatorBizObjects\ApexFileCreatorBizObjects.csproj">
+      <Project>{4E1B29AC-3710-430B-8B83-85632B7056B9}</Project>
+      <Name>ApexFileCreatorBizObjects</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Utilities\WPFUtils\WPFUtils.csproj">
+      <Project>{C25C35AB-9F60-4ECB-BBCC-1A5E5B342E13}</Project>
+      <Name>WPFUtils</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data.DTCInstructor\Data.DTCInstructor.csproj">
+      <Project>{286BD2B0-1E34-41D7-BA7D-E5840968046B}</Project>
+      <Name>Data.DTCInstructor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data.DTC\Data.DTC.csproj">
+      <Project>{523BF5D1-C6F0-427F-8139-D5F1810F8CF6}</Project>
+      <Name>Data.DTC</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data.Slate\Data.Slate.csproj">
+      <Project>{701F6D1C-FE34-43EC-A5EB-385A4ACDA75A}</Project>
+      <Name>Data.Slate</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

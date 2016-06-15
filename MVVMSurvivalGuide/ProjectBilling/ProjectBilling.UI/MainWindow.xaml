@@ -1,0 +1,10 @@
+﻿<Window x:Class="ProjectBilling.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Shell" MinHeight="150" Height="150" MinWidth="200" Width="200" FocusManager.FocusedElement="{Binding ElementName=ShowProjectsButton}" >
+    
+    <StackPanel>
+        <Button Content=" Update Projects" Name="ShowProjectsButton" Margin="5" Click="ShowProjectsButton_Click" />
+    </StackPanel>
+    
+</Window>

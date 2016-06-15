@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFStockTrader", "WPFStockTrader\WPFStockTrader.csproj", "{613FE212-13C4-46F8-A134-AD46B4C52A59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Stock.Data", "..\Stock.Data\Stock.Data.csproj", "{23E70AF7-0EA0-4F8A-9D12-E2A3B66428DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPFUtils", "..\..\wpfutils\WPFUtils.csproj", "{04775AAA-EE41-4E0D-91F8-147A9ADC722C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{613FE212-13C4-46F8-A134-AD46B4C52A59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{613FE212-13C4-46F8-A134-AD46B4C52A59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{613FE212-13C4-46F8-A134-AD46B4C52A59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{613FE212-13C4-46F8-A134-AD46B4C52A59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23E70AF7-0EA0-4F8A-9D12-E2A3B66428DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23E70AF7-0EA0-4F8A-9D12-E2A3B66428DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23E70AF7-0EA0-4F8A-9D12-E2A3B66428DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23E70AF7-0EA0-4F8A-9D12-E2A3B66428DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04775AAA-EE41-4E0D-91F8-147A9ADC722C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04775AAA-EE41-4E0D-91F8-147A9ADC722C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04775AAA-EE41-4E0D-91F8-147A9ADC722C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04775AAA-EE41-4E0D-91F8-147A9ADC722C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

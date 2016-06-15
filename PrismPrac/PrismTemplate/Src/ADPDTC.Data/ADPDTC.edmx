@@ -1,0 +1,494 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ADPDTCModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="ADPDTCModelStoreContainer">
+          <EntitySet Name="ADP_Raw" EntityType="ADPDTCModel.Store.ADP_Raw" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="DTFPART" EntityType="ADPDTCModel.Store.DTFPART" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="PARTPO" EntityType="ADPDTCModel.Store.PARTPO" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="ADP_Raw">
+          <Key>
+            <PropertyRef Name="Tran_Id" />
+          </Key>
+          <Property Name="MatchType" Type="varchar" MaxLength="1000" />
+          <Property Name="MatchId" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="1000" />
+          <Property Name="TradeId" Type="varchar" MaxLength="50" />
+          <Property Name="MatchedBy" Type="varchar" MaxLength="1000" />
+          <Property Name="Ctpy" Type="varchar" MaxLength="100" />
+          <Property Name="Tran_Id" Type="int" Nullable="false" />
+          <Property Name="Source" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Tran_Type" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="Acct_Number" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="Check_Digit" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="Acct_Crcy" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Company" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="BatchCode" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Entry_Code" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="Process_Date" Type="datetime" Nullable="false" />
+          <Property Name="Trade_Date" Type="datetime" Nullable="false" />
+          <Property Name="Settlement_Date" Type="datetime" Nullable="false" />
+          <Property Name="Amount" Type="money" Nullable="false" />
+          <Property Name="Currency" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="Source_Security_Id" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Alt_Security_Id" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Security_Desc" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="Quantity" Type="numeric" Nullable="false" />
+          <Property Name="Price" Type="money" Nullable="false" />
+          <Property Name="Description" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="Cancel" Type="char" Nullable="false" MaxLength="1" />
+          <Property Name="BackDated" Type="tinyint" Nullable="false" />
+          <Property Name="BackDated_Date" Type="datetime" Nullable="false" />
+          <Property Name="Cpty" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Accounting_Offset" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="Offset_Trans" Type="varchar" Nullable="false" MaxLength="12" />
+          <Property Name="Record_Flag" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="Client_ID" Type="char" MaxLength="3" />
+          <Property Name="Account_InActive" Type="bit" />
+          <Property Name="Account_InActive_Date" Type="datetime" />
+          <Property Name="RowColor" Type="varchar" MaxLength="300" />
+        </EntityType>
+        <EntityType Name="DTFPART">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MatchId" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="1000" />
+          <Property Name="MatchedBy" Type="varchar" MaxLength="1000" />
+          <Property Name="DateofData" Type="datetime" />
+          <Property Name="SubFunction" Type="varchar" MaxLength="50" />
+          <Property Name="DataTypeReq" Type="varchar" MaxLength="1" />
+          <Property Name="SystemOrigCode" Type="varchar" MaxLength="1" />
+          <Property Name="StatusCode" Type="varchar" MaxLength="1" />
+          <Property Name="VerControlNum" Type="varchar" MaxLength="2" />
+          <Property Name="TransOrigSource" Type="varchar" MaxLength="4" />
+          <Property Name="AcctNum" Type="varchar" MaxLength="12" />
+          <Property Name="SettlementCode" Type="varchar" MaxLength="1" />
+          <Property Name="ParticipantNum" Type="varchar" MaxLength="4" />
+          <Property Name="CUSIP" Type="varchar" MaxLength="9" />
+          <Property Name="CNSSubAcctType" Type="varchar" MaxLength="1" />
+          <Property Name="ReasonCode" Type="varchar" MaxLength="3" />
+          <Property Name="MuniDealerCompTrade" Type="varchar" MaxLength="1" />
+          <Property Name="ContraParticipantNum" Type="varchar" MaxLength="4" />
+          <Property Name="SecuritySubIssueType" Type="varchar" MaxLength="3" />
+          <Property Name="ContraParticipant" Type="varchar" MaxLength="4" />
+          <Property Name="InternalAcctNum" Type="varchar" MaxLength="12" />
+          <Property Name="DelivererAcctNum" Type="varchar" MaxLength="17" />
+          <Property Name="ReceiverAcctNum" Type="varchar" MaxLength="17" />
+          <Property Name="SubBankAcctNum" Type="varchar" MaxLength="17" />
+          <Property Name="SettlementDate" Type="varchar" MaxLength="6" />
+          <Property Name="ContraCUSIP" Type="varchar" MaxLength="9" />
+          <Property Name="FractionalSharesInd" Type="varchar" MaxLength="1" />
+          <Property Name="AsofDate" Type="varchar" MaxLength="6" />
+          <Property Name="PTAInd" Type="varchar" MaxLength="1" />
+          <Property Name="DueBillInd" Type="varchar" MaxLength="1" />
+          <Property Name="Remarks" Type="varchar" MaxLength="210" />
+          <Property Name="ThirdPartyNum" Type="varchar" MaxLength="6" />
+          <Property Name="TransType" Type="varchar" MaxLength="3" />
+          <Property Name="AcctType" Type="varchar" MaxLength="3" />
+          <Property Name="CUSIPDesc" Type="varchar" MaxLength="20" />
+          <Property Name="CMOTradeFactor" Type="varchar" MaxLength="14" />
+          <Property Name="ShareQuantity" Type="numeric" Precision="20" />
+          <Property Name="BankIdentifier" Type="varchar" MaxLength="8" />
+          <Property Name="BankNum" Type="varchar" MaxLength="8" />
+          <Property Name="IPOBrokerAcctNum" Type="varchar" MaxLength="12" />
+          <Property Name="IPOCorAcctNum" Type="varchar" MaxLength="12" />
+          <Property Name="ATPOrigRef" Type="numeric" Precision="20" />
+          <Property Name="SerialNum" Type="numeric" Precision="20" />
+          <Property Name="LoanDate" Type="numeric" Precision="20" />
+          <Property Name="AcctTypeNew" Type="varchar" MaxLength="2" />
+          <Property Name="ActionCode" Type="varchar" MaxLength="1" />
+          <Property Name="TransTypeNew" Type="varchar" MaxLength="3" />
+          <Property Name="TradeDate" Type="numeric" Precision="20" />
+          <Property Name="CentsAmount" Type="numeric" Precision="20" />
+          <Property Name="DollarAmount" Type="numeric" Precision="20" Scale="2" />
+          <Property Name="JournalCode" Type="varchar" MaxLength="1" />
+          <Property Name="ControlNum" Type="numeric" Precision="20" />
+          <Property Name="ATPRecordAddress" Type="numeric" Precision="20" />
+          <Property Name="BatchVariable" Type="varchar" MaxLength="3" />
+          <Property Name="BatchConstant" Type="varchar" MaxLength="3" />
+          <Property Name="TransferAgentNum" Type="varchar" MaxLength="8" />
+          <Property Name="FOSPInd" Type="varchar" MaxLength="1" />
+          <Property Name="ABA" Type="varchar" MaxLength="9" />
+          <Property Name="FedSubAccount" Type="varchar" MaxLength="20" />
+          <Property Name="FedTPDelivererText" Type="varchar" MaxLength="40" />
+          <Property Name="FedTPReceiverText" Type="varchar" MaxLength="40" />
+          <Property Name="ParticipantID" Type="int" />
+        </EntityType>
+        <EntityType Name="PARTPO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MatchId" Type="int" />
+          <Property Name="Status" Type="varchar" MaxLength="1000" />
+          <Property Name="MatchedBy" Type="varchar" MaxLength="1000" />
+          <Property Name="Ctpy" Type="varchar" MaxLength="50" />
+          <Property Name="DateofData" Type="datetime" />
+          <Property Name="ParticipantID" Type="int" />
+          <Property Name="CUSIP" Type="varchar" MaxLength="9" />
+          <Property Name="TradingSymbol" Type="varchar" MaxLength="5" />
+          <Property Name="PayeeCode" Type="varchar" MaxLength="1" />
+          <Property Name="PayeePartNum" Type="varchar" MaxLength="4" />
+          <Property Name="OldPrice" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="NewPrice" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="ExpireDate" Type="varchar" MaxLength="4" />
+          <Property Name="PayorPartNum" Type="varchar" MaxLength="4" />
+          <Property Name="ContractsNum" Type="varchar" MaxLength="5" />
+          <Property Name="ReceiptRelease" Type="varchar" MaxLength="1" />
+          <Property Name="PutCall" Type="varchar" MaxLength="1" />
+          <Property Name="DollarAmt" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="ReasonCode" Type="varchar" MaxLength="2" />
+          <Property Name="ActivityCode" Type="numeric" Precision="20" />
+          <Property Name="ExercisePrice" Type="numeric" Precision="20" Scale="8" />
+          <Property Name="OpenCloseCode" Type="varchar" MaxLength="1" />
+          <Property Name="CrossRefLineNum" Type="varchar" MaxLength="2" />
+          <Property Name="CrossRefDate" Type="varchar" MaxLength="6" />
+          <Property Name="BearingSerialNum" Type="varchar" MaxLength="9" />
+          <Property Name="BankCustNameAcct" Type="varchar" MaxLength="30" />
+          <Property Name="Adjustments" Type="numeric" Precision="20" />
+          <Property Name="ContractDate" Type="varchar" MaxLength="6" />
+          <Property Name="SecurityDesc" Type="varchar" MaxLength="30" />
+          <Property Name="ShareQuantity" Type="numeric" Precision="20" />
+          <Property Name="Comments" Type="varchar" MaxLength="60" />
+          <Property Name="SettlementCode" Type="varchar" MaxLength="1" />
+          <Property Name="OptionsClearingCorp" Type="varchar" MaxLength="30" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ADPDTCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="ADPDTCEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ADP_Raw" EntityType="ADPDTCModel.ADP_Raw" />
+          <EntitySet Name="DTFPARTs" EntityType="ADPDTCModel.DTFPART" />
+          <EntitySet Name="PARTPOes" EntityType="ADPDTCModel.PARTPO" />
+        </EntityContainer>
+        <EntityType Name="ADP_Raw">
+          <Key>
+            <PropertyRef Name="Tran_Id" />
+          </Key>
+          <Property Name="MatchType" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="MatchId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="TradeId" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="MatchedBy" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Ctpy" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Tran_Id" Type="Int32" Nullable="false" />
+          <Property Name="Source" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Tran_Type" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Acct_Number" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="Check_Digit" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Acct_Crcy" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="Company" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="BatchCode" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="Entry_Code" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="Process_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Trade_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Settlement_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Amount" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Currency" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="Source_Security_Id" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Alt_Security_Id" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Security_Desc" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Quantity" Type="Decimal" Nullable="false" Precision="18" Scale="0" />
+          <Property Name="Price" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="Description" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="Cancel" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="true" />
+          <Property Name="BackDated" Type="Byte" Nullable="false" />
+          <Property Name="BackDated_Date" Type="DateTime" Nullable="false" />
+          <Property Name="Cpty" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Accounting_Offset" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="Offset_Trans" Type="String" Nullable="false" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="Record_Flag" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="Client_ID" Type="String" MaxLength="3" Unicode="false" FixedLength="true" />
+          <Property Name="Account_InActive" Type="Boolean" />
+          <Property Name="Account_InActive_Date" Type="DateTime" />
+          <Property Name="RowColor" Type="String" MaxLength="300" Unicode="false" FixedLength="false" />
+        </EntityType>
+        <EntityType Name="DTFPART">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MatchId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="MatchedBy" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="DateofData" Type="DateTime" />
+          <Property Name="SubFunction" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DataTypeReq" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="SystemOrigCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="StatusCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="VerControlNum" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="TransOrigSource" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="AcctNum" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="SettlementCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ParticipantNum" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="CUSIP" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="CNSSubAcctType" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ReasonCode" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="MuniDealerCompTrade" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ContraParticipantNum" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="SecuritySubIssueType" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="ContraParticipant" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="InternalAcctNum" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="DelivererAcctNum" Type="String" MaxLength="17" Unicode="false" FixedLength="false" />
+          <Property Name="ReceiverAcctNum" Type="String" MaxLength="17" Unicode="false" FixedLength="false" />
+          <Property Name="SubBankAcctNum" Type="String" MaxLength="17" Unicode="false" FixedLength="false" />
+          <Property Name="SettlementDate" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="ContraCUSIP" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="FractionalSharesInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="AsofDate" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="PTAInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="DueBillInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="Remarks" Type="String" MaxLength="210" Unicode="false" FixedLength="false" />
+          <Property Name="ThirdPartyNum" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="TransType" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="AcctType" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="CUSIPDesc" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CMOTradeFactor" Type="String" MaxLength="14" Unicode="false" FixedLength="false" />
+          <Property Name="ShareQuantity" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="BankIdentifier" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="BankNum" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="IPOBrokerAcctNum" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="IPOCorAcctNum" Type="String" MaxLength="12" Unicode="false" FixedLength="false" />
+          <Property Name="ATPOrigRef" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="SerialNum" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="LoanDate" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="AcctTypeNew" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ActionCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="TransTypeNew" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="TradeDate" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="CentsAmount" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="DollarAmount" Type="Decimal" Precision="20" Scale="2" />
+          <Property Name="JournalCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ControlNum" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="ATPRecordAddress" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="BatchVariable" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="BatchConstant" Type="String" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="TransferAgentNum" Type="String" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="FOSPInd" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ABA" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="FedSubAccount" Type="String" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="FedTPDelivererText" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="FedTPReceiverText" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <Property Name="ParticipantID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="PARTPO">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MatchId" Type="Int32" />
+          <Property Name="Status" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="MatchedBy" Type="String" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <Property Name="Ctpy" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DateofData" Type="DateTime" />
+          <Property Name="ParticipantID" Type="Int32" />
+          <Property Name="CUSIP" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="TradingSymbol" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="PayeeCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="PayeePartNum" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="OldPrice" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="NewPrice" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="ExpireDate" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="PayorPartNum" Type="String" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="ContractsNum" Type="String" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="ReceiptRelease" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="PutCall" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="DollarAmt" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="ReasonCode" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="ActivityCode" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="ExercisePrice" Type="Decimal" Precision="20" Scale="8" />
+          <Property Name="OpenCloseCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CrossRefLineNum" Type="String" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="CrossRefDate" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="BearingSerialNum" Type="String" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="BankCustNameAcct" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="Adjustments" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="ContractDate" Type="String" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="SecurityDesc" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="ShareQuantity" Type="Decimal" Precision="20" Scale="0" />
+          <Property Name="Comments" Type="String" MaxLength="60" Unicode="false" FixedLength="false" />
+          <Property Name="SettlementCode" Type="String" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="OptionsClearingCorp" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ADPDTCModelStoreContainer" CdmEntityContainer="ADPDTCEntities">
+          <EntitySetMapping Name="ADP_Raw"><EntityTypeMapping TypeName="ADPDTCModel.ADP_Raw"><MappingFragment StoreEntitySet="ADP_Raw">
+            <ScalarProperty Name="MatchType" ColumnName="MatchType" />
+            <ScalarProperty Name="MatchId" ColumnName="MatchId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="TradeId" ColumnName="TradeId" />
+            <ScalarProperty Name="MatchedBy" ColumnName="MatchedBy" />
+            <ScalarProperty Name="Ctpy" ColumnName="Ctpy" />
+            <ScalarProperty Name="Tran_Id" ColumnName="Tran_Id" />
+            <ScalarProperty Name="Source" ColumnName="Source" />
+            <ScalarProperty Name="Tran_Type" ColumnName="Tran_Type" />
+            <ScalarProperty Name="Acct_Number" ColumnName="Acct_Number" />
+            <ScalarProperty Name="Check_Digit" ColumnName="Check_Digit" />
+            <ScalarProperty Name="Acct_Crcy" ColumnName="Acct_Crcy" />
+            <ScalarProperty Name="Company" ColumnName="Company" />
+            <ScalarProperty Name="BatchCode" ColumnName="BatchCode" />
+            <ScalarProperty Name="Entry_Code" ColumnName="Entry_Code" />
+            <ScalarProperty Name="Process_Date" ColumnName="Process_Date" />
+            <ScalarProperty Name="Trade_Date" ColumnName="Trade_Date" />
+            <ScalarProperty Name="Settlement_Date" ColumnName="Settlement_Date" />
+            <ScalarProperty Name="Amount" ColumnName="Amount" />
+            <ScalarProperty Name="Currency" ColumnName="Currency" />
+            <ScalarProperty Name="Source_Security_Id" ColumnName="Source_Security_Id" />
+            <ScalarProperty Name="Alt_Security_Id" ColumnName="Alt_Security_Id" />
+            <ScalarProperty Name="Security_Desc" ColumnName="Security_Desc" />
+            <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+            <ScalarProperty Name="Price" ColumnName="Price" />
+            <ScalarProperty Name="Description" ColumnName="Description" />
+            <ScalarProperty Name="Cancel" ColumnName="Cancel" />
+            <ScalarProperty Name="BackDated" ColumnName="BackDated" />
+            <ScalarProperty Name="BackDated_Date" ColumnName="BackDated_Date" />
+            <ScalarProperty Name="Cpty" ColumnName="Cpty" />
+            <ScalarProperty Name="Accounting_Offset" ColumnName="Accounting_Offset" />
+            <ScalarProperty Name="Offset_Trans" ColumnName="Offset_Trans" />
+            <ScalarProperty Name="Record_Flag" ColumnName="Record_Flag" />
+            <ScalarProperty Name="Client_ID" ColumnName="Client_ID" />
+            <ScalarProperty Name="Account_InActive" ColumnName="Account_InActive" />
+            <ScalarProperty Name="Account_InActive_Date" ColumnName="Account_InActive_Date" />
+            <ScalarProperty Name="RowColor" ColumnName="RowColor" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="DTFPARTs"><EntityTypeMapping TypeName="ADPDTCModel.DTFPART"><MappingFragment StoreEntitySet="DTFPART">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MatchId" ColumnName="MatchId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MatchedBy" ColumnName="MatchedBy" />
+            <ScalarProperty Name="DateofData" ColumnName="DateofData" />
+            <ScalarProperty Name="SubFunction" ColumnName="SubFunction" />
+            <ScalarProperty Name="DataTypeReq" ColumnName="DataTypeReq" />
+            <ScalarProperty Name="SystemOrigCode" ColumnName="SystemOrigCode" />
+            <ScalarProperty Name="StatusCode" ColumnName="StatusCode" />
+            <ScalarProperty Name="VerControlNum" ColumnName="VerControlNum" />
+            <ScalarProperty Name="TransOrigSource" ColumnName="TransOrigSource" />
+            <ScalarProperty Name="AcctNum" ColumnName="AcctNum" />
+            <ScalarProperty Name="SettlementCode" ColumnName="SettlementCode" />
+            <ScalarProperty Name="ParticipantNum" ColumnName="ParticipantNum" />
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="CNSSubAcctType" ColumnName="CNSSubAcctType" />
+            <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+            <ScalarProperty Name="MuniDealerCompTrade" ColumnName="MuniDealerCompTrade" />
+            <ScalarProperty Name="ContraParticipantNum" ColumnName="ContraParticipantNum" />
+            <ScalarProperty Name="SecuritySubIssueType" ColumnName="SecuritySubIssueType" />
+            <ScalarProperty Name="ContraParticipant" ColumnName="ContraParticipant" />
+            <ScalarProperty Name="InternalAcctNum" ColumnName="InternalAcctNum" />
+            <ScalarProperty Name="DelivererAcctNum" ColumnName="DelivererAcctNum" />
+            <ScalarProperty Name="ReceiverAcctNum" ColumnName="ReceiverAcctNum" />
+            <ScalarProperty Name="SubBankAcctNum" ColumnName="SubBankAcctNum" />
+            <ScalarProperty Name="SettlementDate" ColumnName="SettlementDate" />
+            <ScalarProperty Name="ContraCUSIP" ColumnName="ContraCUSIP" />
+            <ScalarProperty Name="FractionalSharesInd" ColumnName="FractionalSharesInd" />
+            <ScalarProperty Name="AsofDate" ColumnName="AsofDate" />
+            <ScalarProperty Name="PTAInd" ColumnName="PTAInd" />
+            <ScalarProperty Name="DueBillInd" ColumnName="DueBillInd" />
+            <ScalarProperty Name="Remarks" ColumnName="Remarks" />
+            <ScalarProperty Name="ThirdPartyNum" ColumnName="ThirdPartyNum" />
+            <ScalarProperty Name="TransType" ColumnName="TransType" />
+            <ScalarProperty Name="AcctType" ColumnName="AcctType" />
+            <ScalarProperty Name="CUSIPDesc" ColumnName="CUSIPDesc" />
+            <ScalarProperty Name="CMOTradeFactor" ColumnName="CMOTradeFactor" />
+            <ScalarProperty Name="ShareQuantity" ColumnName="ShareQuantity" />
+            <ScalarProperty Name="BankIdentifier" ColumnName="BankIdentifier" />
+            <ScalarProperty Name="BankNum" ColumnName="BankNum" />
+            <ScalarProperty Name="IPOBrokerAcctNum" ColumnName="IPOBrokerAcctNum" />
+            <ScalarProperty Name="IPOCorAcctNum" ColumnName="IPOCorAcctNum" />
+            <ScalarProperty Name="ATPOrigRef" ColumnName="ATPOrigRef" />
+            <ScalarProperty Name="SerialNum" ColumnName="SerialNum" />
+            <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
+            <ScalarProperty Name="AcctTypeNew" ColumnName="AcctTypeNew" />
+            <ScalarProperty Name="ActionCode" ColumnName="ActionCode" />
+            <ScalarProperty Name="TransTypeNew" ColumnName="TransTypeNew" />
+            <ScalarProperty Name="TradeDate" ColumnName="TradeDate" />
+            <ScalarProperty Name="CentsAmount" ColumnName="CentsAmount" />
+            <ScalarProperty Name="DollarAmount" ColumnName="DollarAmount" />
+            <ScalarProperty Name="JournalCode" ColumnName="JournalCode" />
+            <ScalarProperty Name="ControlNum" ColumnName="ControlNum" />
+            <ScalarProperty Name="ATPRecordAddress" ColumnName="ATPRecordAddress" />
+            <ScalarProperty Name="BatchVariable" ColumnName="BatchVariable" />
+            <ScalarProperty Name="BatchConstant" ColumnName="BatchConstant" />
+            <ScalarProperty Name="TransferAgentNum" ColumnName="TransferAgentNum" />
+            <ScalarProperty Name="FOSPInd" ColumnName="FOSPInd" />
+            <ScalarProperty Name="ABA" ColumnName="ABA" />
+            <ScalarProperty Name="FedSubAccount" ColumnName="FedSubAccount" />
+            <ScalarProperty Name="FedTPDelivererText" ColumnName="FedTPDelivererText" />
+            <ScalarProperty Name="FedTPReceiverText" ColumnName="FedTPReceiverText" />
+            <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+          <EntitySetMapping Name="PARTPOes"><EntityTypeMapping TypeName="ADPDTCModel.PARTPO"><MappingFragment StoreEntitySet="PARTPO">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MatchId" ColumnName="MatchId" />
+            <ScalarProperty Name="Status" ColumnName="Status" />
+            <ScalarProperty Name="MatchedBy" ColumnName="MatchedBy" />
+            <ScalarProperty Name="Ctpy" ColumnName="Ctpy" />
+            <ScalarProperty Name="DateofData" ColumnName="DateofData" />
+            <ScalarProperty Name="ParticipantID" ColumnName="ParticipantID" />
+            <ScalarProperty Name="CUSIP" ColumnName="CUSIP" />
+            <ScalarProperty Name="TradingSymbol" ColumnName="TradingSymbol" />
+            <ScalarProperty Name="PayeeCode" ColumnName="PayeeCode" />
+            <ScalarProperty Name="PayeePartNum" ColumnName="PayeePartNum" />
+            <ScalarProperty Name="OldPrice" ColumnName="OldPrice" />
+            <ScalarProperty Name="NewPrice" ColumnName="NewPrice" />
+            <ScalarProperty Name="ExpireDate" ColumnName="ExpireDate" />
+            <ScalarProperty Name="PayorPartNum" ColumnName="PayorPartNum" />
+            <ScalarProperty Name="ContractsNum" ColumnName="ContractsNum" />
+            <ScalarProperty Name="ReceiptRelease" ColumnName="ReceiptRelease" />
+            <ScalarProperty Name="PutCall" ColumnName="PutCall" />
+            <ScalarProperty Name="DollarAmt" ColumnName="DollarAmt" />
+            <ScalarProperty Name="ReasonCode" ColumnName="ReasonCode" />
+            <ScalarProperty Name="ActivityCode" ColumnName="ActivityCode" />
+            <ScalarProperty Name="ExercisePrice" ColumnName="ExercisePrice" />
+            <ScalarProperty Name="OpenCloseCode" ColumnName="OpenCloseCode" />
+            <ScalarProperty Name="CrossRefLineNum" ColumnName="CrossRefLineNum" />
+            <ScalarProperty Name="CrossRefDate" ColumnName="CrossRefDate" />
+            <ScalarProperty Name="BearingSerialNum" ColumnName="BearingSerialNum" />
+            <ScalarProperty Name="BankCustNameAcct" ColumnName="BankCustNameAcct" />
+            <ScalarProperty Name="Adjustments" ColumnName="Adjustments" />
+            <ScalarProperty Name="ContractDate" ColumnName="ContractDate" />
+            <ScalarProperty Name="SecurityDesc" ColumnName="SecurityDesc" />
+            <ScalarProperty Name="ShareQuantity" ColumnName="ShareQuantity" />
+            <ScalarProperty Name="Comments" ColumnName="Comments" />
+            <ScalarProperty Name="SettlementCode" ColumnName="SettlementCode" />
+            <ScalarProperty Name="OptionsClearingCorp" ColumnName="OptionsClearingCorp" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="ADPDTC" ZoomLevel="74">
+        <EntityTypeShape EntityType="ADPDTCModel.ADP_Raw" Width="1.5" PointX="0.75" PointY="0.75" Height="8.1339322916666656" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADPDTCModel.DTFPART" Width="1.5" PointX="2.75" PointY="0.75" Height="13.13376953125" IsExpanded="true" />
+        <EntityTypeShape EntityType="ADPDTCModel.PARTPO" Width="1.5" PointX="4.75" PointY="0.75" Height="7.5570279947916656" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

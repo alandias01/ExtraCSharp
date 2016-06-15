@@ -1,0 +1,47 @@
+/NodejsExpressPrac
+# don't ignore myself!
+!.gitignore
+
+wordpress/
+
+#Eclipse
+.settings/
+Thumbs.db
+.buildpath
+.project
+
+
+#Visual Studio
+
+# Visual Studio user-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+#Visual Studio User-specific files (MonoDevelop/Xamarin Studio)
+*.userprefs
+
+#Visual Studio Build results
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+bld/
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+csx/
+rcf/
+
+#Visual Studio Let VS rebuild package
+[Pp]ackages/
+
+#Visual Studio 2015 cache/options directory
+.vs/
+
+
+# ReSharper
+_ReSharper*/

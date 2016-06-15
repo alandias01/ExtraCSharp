@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="DTCModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DTCModelStoreContainer" />
+        <Function Name="spAlanGetRealTimePositions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ParticipantNum" Type="varchar" Mode="In" />
+        </Function>
+        <Function Name="spAlanGetRealTimePositions_Pledger" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="ParticipantNum" Type="varchar" Mode="In" />
+        </Function>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DTCModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DTCEntities" annotation:LazyLoadingEnabled="true" >
+          <FunctionImport Name="spAlanGetRealTimePositions" ReturnType="Collection(DTCModel.spAlanGetRealTimePositions_Result)">
+          <Parameter Name="ParticipantNum" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="spAlanGetRealTimePositions_Pledger" ReturnType="Collection(DTCModel.spAlanGetRealTimePositions_Pledger_Result)">
+          <Parameter Name="ParticipantNum" Mode="In" Type="String" />
+          </FunctionImport>
+        </EntityContainer>
+        <ComplexType Name="spAlanGetRealTimePositions_Result">
+          <Property Type="String" Name="cusip" Nullable="true" MaxLength="9" />
+          <Property Type="String" Name="Ticker" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="unpledgedquantity" Nullable="true" Precision="38" Scale="0" />
+          <Property Type="Int32" Name="pledgedquantity" Nullable="true" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="TodaysNet" Nullable="true" />
+          <Property Type="Int32" Name="TomorrowsNet" Nullable="true" />
+        </ComplexType>
+        <ComplexType Name="spAlanGetRealTimePositions_Pledger_Result">
+          <Property Type="String" Name="cusip" Nullable="true" MaxLength="20" />
+          <Property Type="String" Name="Ticker" Nullable="true" MaxLength="50" />
+          <Property Type="Decimal" Name="unpledgedquantity" Nullable="true" Precision="38" Scale="0" />
+          <Property Type="Int32" Name="pledgedquantity" Nullable="true" />
+          <Property Type="Decimal" Name="Price" Nullable="true" Precision="19" />
+          <Property Type="Int32" Name="TodaysNet" Nullable="true" />
+          <Property Type="Int32" Name="TomorrowsNet" Nullable="true" />
+          <Property Type="String" Name="ParticipantNum" Nullable="true" MaxLength="10" />
+        </ComplexType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DTCModelStoreContainer" CdmEntityContainer="DTCEntities" >
+          <FunctionImportMapping FunctionImportName="spAlanGetRealTimePositions" FunctionName="DTCModel.Store.spAlanGetRealTimePositions">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DTCModel.spAlanGetRealTimePositions_Result">
+                <ScalarProperty Name="cusip" ColumnName="cusip" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="unpledgedquantity" ColumnName="unpledgedquantity" />
+                <ScalarProperty Name="pledgedquantity" ColumnName="pledgedquantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TodaysNet" ColumnName="TodaysNet" />
+                <ScalarProperty Name="TomorrowsNet" ColumnName="TomorrowsNet" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="spAlanGetRealTimePositions_Pledger" FunctionName="DTCModel.Store.spAlanGetRealTimePositions_Pledger">
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="DTCModel.spAlanGetRealTimePositions_Pledger_Result">
+                <ScalarProperty Name="cusip" ColumnName="cusip" />
+                <ScalarProperty Name="Ticker" ColumnName="Ticker" />
+                <ScalarProperty Name="unpledgedquantity" ColumnName="unpledgedquantity" />
+                <ScalarProperty Name="pledgedquantity" ColumnName="pledgedquantity" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="TodaysNet" ColumnName="TodaysNet" />
+                <ScalarProperty Name="TomorrowsNet" ColumnName="TomorrowsNet" />
+                <ScalarProperty Name="ParticipantNum" ColumnName="ParticipantNum" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Blob.DTC" />
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>

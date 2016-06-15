@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FIX01", "FIX01\FIX01.csproj", "{5B76E896-9FD8-4B53-83EC-3D6E8DBAF27B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FixAcceptor", "..\FIXAcceptor\FixAcceptor\FixAcceptor.csproj", "{68FD4F2A-D6D4-4924-A838-0A8CFB7D1B25}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B76E896-9FD8-4B53-83EC-3D6E8DBAF27B}.Debug|x86.ActiveCfg = Debug|x86
+		{5B76E896-9FD8-4B53-83EC-3D6E8DBAF27B}.Debug|x86.Build.0 = Debug|x86
+		{5B76E896-9FD8-4B53-83EC-3D6E8DBAF27B}.Release|x86.ActiveCfg = Release|x86
+		{5B76E896-9FD8-4B53-83EC-3D6E8DBAF27B}.Release|x86.Build.0 = Release|x86
+		{68FD4F2A-D6D4-4924-A838-0A8CFB7D1B25}.Debug|x86.ActiveCfg = Debug|x86
+		{68FD4F2A-D6D4-4924-A838-0A8CFB7D1B25}.Debug|x86.Build.0 = Debug|x86
+		{68FD4F2A-D6D4-4924-A838-0A8CFB7D1B25}.Release|x86.ActiveCfg = Release|x86
+		{68FD4F2A-D6D4-4924-A838-0A8CFB7D1B25}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

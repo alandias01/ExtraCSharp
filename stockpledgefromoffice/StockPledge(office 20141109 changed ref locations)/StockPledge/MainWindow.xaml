@@ -1,0 +1,147 @@
+﻿<ribbon:RibbonWindow x:Class="StockPledge.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="MainWindow"
+        xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"             
+		x:Name="RibbonWindow"
+		Width="1040" Height="547" MinWidth="640" MinHeight="480">
+
+    <Grid x:Name="LayoutRoot">
+        
+        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <ribbon:Ribbon x:Name="MyRibbon" SelectionChanged="MyRibbon_SelectionChanged" Background="{StaticResource MainAreaFill}" >
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu SmallImageSource="Images\SmallIcon.png">
+                    <ribbon:RibbonApplicationMenuItem Header="Hello _Ribbon"
+                                                      x:Name="MenuItem1"
+                                                      ImageSource="Images\LargeIcon.png"/>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            <ribbon:RibbonTab x:Name="PledgerHomeTab" 
+                              Header="Pledger">
+                <ribbon:RibbonGroup x:Name="PledgerGroup1" 
+                                    Header="Pledge Options">
+                    <ribbon:RibbonButton x:Name="PledgerLButton1"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         Label="Auto Pledge"
+                                         Command="{Binding ShowAutoPledgeViewCommand}"/>
+
+                    <ribbon:RibbonButton x:Name="PledgersButton1"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Manual Pledge" 
+                                         Command="{Binding ShowManualPledgeViewCommand}"/>
+
+                    <ribbon:RibbonButton x:Name="PledgersButton2"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Drag and Drop Pledge" 
+                                         Command="{Binding ShowDragAndDropPledgeViewCommand}"/>
+
+                </ribbon:RibbonGroup>
+                
+                
+
+                <ribbon:RibbonGroup Header="269">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="269 Net Stock Loan Position Value:" />
+                        <TextBlock Name="txt269NetStockLoanPositionValue" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="269 Net Stock Borrow Position Value:" />
+                        <TextBlock Name="txt269NetStockBorrowPositionValue" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="269 Loan Borrow Spread:" />
+                        <TextBlock Name="txt269LoanBorrowSpread" Width="100"/>
+                    </StackPanel>
+                    
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup>
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="BL Difference:" />
+                        <TextBlock Name="txtBLDifference" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Todays Hedge Mark:" />
+                        <TextBlock Name="txtTodaysHedgeMark" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="Net Hedge Spread:" />
+                        <TextBlock Name="txtNetHedgeSpread" Width="100"/>
+                    </StackPanel>
+
+                </ribbon:RibbonGroup>
+
+                <ribbon:RibbonGroup Header="5239">
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="5239 Net Stock Loan Position Value:" />
+                        <TextBlock Name="txt5239NetStockLoanPositionValue" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="5239 Net Stock Borrow Position Value:" />
+                        <TextBlock Name="txt5239NetStockBorrowPositionValue" Width="100"/>
+                    </StackPanel>
+
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="5239 Loan Borrow Spread:" />
+                        <TextBlock Name="txt5239LoanBorrowSpread" Width="100"/>
+                    </StackPanel>
+
+                </ribbon:RibbonGroup>
+
+
+            </ribbon:RibbonTab>
+
+            <ribbon:RibbonTab x:Name="APEXHomeTab" 
+                              Header="Apex" >
+
+
+                <ribbon:RibbonGroup x:Name="APEXGroup1" 
+                                    Header="Group1" >
+                    <ribbon:RibbonButton x:Name="APEXButton1"
+                                         LargeImageSource="Images\LargeIcon.png"
+                                         Label="Button1"
+                                         >
+
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="MouseMove">
+                                <i:InvokeCommandAction Command="{Binding ShowApexCommand}" />
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                    </ribbon:RibbonButton>
+
+                    <ribbon:RibbonButton x:Name="APEXButton2"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Button2" />
+                    <ribbon:RibbonButton x:Name="APEXButton3"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Button3" />
+                    <ribbon:RibbonButton x:Name="APEXButton4"
+                                         SmallImageSource="Images\SmallIcon.png"
+                                         Label="Button4" />
+
+                </ribbon:RibbonGroup>
+                
+
+            </ribbon:RibbonTab>
+
+        </ribbon:Ribbon>
+
+
+        <Grid Grid.Row="1" x:Name="MainArea" Background="{StaticResource MainAreaFill}">
+
+        </Grid>
+        
+    </Grid>
+</ribbon:RibbonWindow>

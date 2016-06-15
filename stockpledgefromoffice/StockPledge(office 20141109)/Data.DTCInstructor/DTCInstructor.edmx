@@ -1,0 +1,215 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="DtcInstructorModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityContainer Name="DtcInstructorModelStoreContainer">
+          <EntitySet Name="OutgoingPledgeOrder" EntityType="DtcInstructorModel.Store.OutgoingPledgeOrder" store:Type="Tables" Schema="dbo" />
+        </EntityContainer>
+        <EntityType Name="OutgoingPledgeOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="MessageId" Type="varchar" MaxLength="250" />
+          <Property Name="DateEntered" Type="datetime" Nullable="false" />
+          <Property Name="EnteredBy" Type="varchar" Nullable="false" MaxLength="150" />
+          <Property Name="DateSent" Type="datetime" />
+          <Property Name="DateConfirmed" Type="datetime" />
+          <Property Name="FeedbackIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="ProductionIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="RecType" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="RecordSuffix" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="VersionNumber" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="UserReferenceNumber" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Adressee" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="RecordType" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="Pledgor" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Pledgee" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="Cusip" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="ShareQuantity" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="LoanDate" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="LoanValueWhole" Type="varchar" Nullable="false" MaxLength="10" />
+          <Property Name="LoanValueDecimal" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="PledgePurpose" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="ReleaseType" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="HypothecationCode" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="PreventPendIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="CnsIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="IpoIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="PtaIndicator" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="FederalReservePurpose" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccParticipantNumber" Type="varchar" Nullable="false" MaxLength="8" />
+          <Property Name="BankAbaNumber" Type="varchar" Nullable="false" MaxLength="9" />
+          <Property Name="OccNumber" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="OccClearingGroupId" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccClearingMemberNumber" Type="varchar" Nullable="false" MaxLength="5" />
+          <Property Name="OccAccountType" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccAccountId" Type="varchar" Nullable="false" MaxLength="15" />
+          <Property Name="OccCollateralType" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccOptionSymbol" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="OccExpirationYear" Type="varchar" Nullable="false" MaxLength="4" />
+          <Property Name="OccExpirationMonth" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccExpirationDay" Type="varchar" Nullable="false" MaxLength="2" />
+          <Property Name="OccOptionType" Type="varchar" Nullable="false" MaxLength="1" />
+          <Property Name="OccOptionStrike" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="OccOptionStrikeDecimal" Type="varchar" Nullable="false" MaxLength="6" />
+          <Property Name="Blank" Type="varchar" Nullable="false" MaxLength="3" />
+          <Property Name="CrossReferenceNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="CustomerAccountNumber" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="OccFiller" Type="varchar" Nullable="false" MaxLength="30" />
+          <Property Name="DtccFiller" Type="varchar" Nullable="false" MaxLength="274" />
+          <Property Name="SourceId" Type="int" />
+          <Property Name="SourceType" Type="char" MaxLength="1" />
+        </EntityType>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="DtcInstructorModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityContainer Name="DtcInstructorEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="OutgoingPledgeOrders" EntityType="DtcInstructorModel.OutgoingPledgeOrder" />
+        </EntityContainer>
+        <EntityType Name="OutgoingPledgeOrder">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="MessageId" Type="String" MaxLength="250" Unicode="false" FixedLength="false" />
+          <Property Name="DateEntered" Type="DateTime" Nullable="false" />
+          <Property Name="EnteredBy" Type="String" Nullable="false" MaxLength="150" Unicode="false" FixedLength="false" />
+          <Property Name="DateSent" Type="DateTime" />
+          <Property Name="DateConfirmed" Type="DateTime" />
+          <Property Name="FeedbackIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ProductionIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="RecType" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="RecordSuffix" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="VersionNumber" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="UserReferenceNumber" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Adressee" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="RecordType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="Pledgor" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Pledgee" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="Cusip" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="ShareQuantity" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="LoanDate" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="LoanValueWhole" Type="String" Nullable="false" MaxLength="10" Unicode="false" FixedLength="false" />
+          <Property Name="LoanValueDecimal" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="PledgePurpose" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="ReleaseType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="HypothecationCode" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="PreventPendIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="CnsIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="IpoIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="PtaIndicator" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="FederalReservePurpose" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccParticipantNumber" Type="String" Nullable="false" MaxLength="8" Unicode="false" FixedLength="false" />
+          <Property Name="BankAbaNumber" Type="String" Nullable="false" MaxLength="9" Unicode="false" FixedLength="false" />
+          <Property Name="OccNumber" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="OccClearingGroupId" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccClearingMemberNumber" Type="String" Nullable="false" MaxLength="5" Unicode="false" FixedLength="false" />
+          <Property Name="OccAccountType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccAccountId" Type="String" Nullable="false" MaxLength="15" Unicode="false" FixedLength="false" />
+          <Property Name="OccCollateralType" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccOptionSymbol" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="OccExpirationYear" Type="String" Nullable="false" MaxLength="4" Unicode="false" FixedLength="false" />
+          <Property Name="OccExpirationMonth" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccExpirationDay" Type="String" Nullable="false" MaxLength="2" Unicode="false" FixedLength="false" />
+          <Property Name="OccOptionType" Type="String" Nullable="false" MaxLength="1" Unicode="false" FixedLength="false" />
+          <Property Name="OccOptionStrike" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="OccOptionStrikeDecimal" Type="String" Nullable="false" MaxLength="6" Unicode="false" FixedLength="false" />
+          <Property Name="Blank" Type="String" Nullable="false" MaxLength="3" Unicode="false" FixedLength="false" />
+          <Property Name="CrossReferenceNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="CustomerAccountNumber" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="OccFiller" Type="String" Nullable="false" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="DtccFiller" Type="String" Nullable="false" MaxLength="274" Unicode="false" FixedLength="false" />
+          <Property Name="SourceId" Type="Int32" />
+          <Property Name="SourceType" Type="String" MaxLength="1" Unicode="false" FixedLength="true" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="DtcInstructorModelStoreContainer" CdmEntityContainer="DtcInstructorEntities">
+          <EntitySetMapping Name="OutgoingPledgeOrders"><EntityTypeMapping TypeName="DtcInstructorModel.OutgoingPledgeOrder"><MappingFragment StoreEntitySet="OutgoingPledgeOrder">
+            <ScalarProperty Name="Id" ColumnName="Id" />
+            <ScalarProperty Name="MessageId" ColumnName="MessageId" />
+            <ScalarProperty Name="DateEntered" ColumnName="DateEntered" />
+            <ScalarProperty Name="EnteredBy" ColumnName="EnteredBy" />
+            <ScalarProperty Name="DateSent" ColumnName="DateSent" />
+            <ScalarProperty Name="DateConfirmed" ColumnName="DateConfirmed" />
+            <ScalarProperty Name="FeedbackIndicator" ColumnName="FeedbackIndicator" />
+            <ScalarProperty Name="ProductionIndicator" ColumnName="ProductionIndicator" />
+            <ScalarProperty Name="RecType" ColumnName="RecType" />
+            <ScalarProperty Name="RecordSuffix" ColumnName="RecordSuffix" />
+            <ScalarProperty Name="VersionNumber" ColumnName="VersionNumber" />
+            <ScalarProperty Name="UserReferenceNumber" ColumnName="UserReferenceNumber" />
+            <ScalarProperty Name="Adressee" ColumnName="Adressee" />
+            <ScalarProperty Name="RecordType" ColumnName="RecordType" />
+            <ScalarProperty Name="Pledgor" ColumnName="Pledgor" />
+            <ScalarProperty Name="Pledgee" ColumnName="Pledgee" />
+            <ScalarProperty Name="Cusip" ColumnName="Cusip" />
+            <ScalarProperty Name="ShareQuantity" ColumnName="ShareQuantity" />
+            <ScalarProperty Name="LoanDate" ColumnName="LoanDate" />
+            <ScalarProperty Name="LoanValueWhole" ColumnName="LoanValueWhole" />
+            <ScalarProperty Name="LoanValueDecimal" ColumnName="LoanValueDecimal" />
+            <ScalarProperty Name="PledgePurpose" ColumnName="PledgePurpose" />
+            <ScalarProperty Name="ReleaseType" ColumnName="ReleaseType" />
+            <ScalarProperty Name="HypothecationCode" ColumnName="HypothecationCode" />
+            <ScalarProperty Name="PreventPendIndicator" ColumnName="PreventPendIndicator" />
+            <ScalarProperty Name="CnsIndicator" ColumnName="CnsIndicator" />
+            <ScalarProperty Name="IpoIndicator" ColumnName="IpoIndicator" />
+            <ScalarProperty Name="PtaIndicator" ColumnName="PtaIndicator" />
+            <ScalarProperty Name="FederalReservePurpose" ColumnName="FederalReservePurpose" />
+            <ScalarProperty Name="OccParticipantNumber" ColumnName="OccParticipantNumber" />
+            <ScalarProperty Name="BankAbaNumber" ColumnName="BankAbaNumber" />
+            <ScalarProperty Name="OccNumber" ColumnName="OccNumber" />
+            <ScalarProperty Name="OccClearingGroupId" ColumnName="OccClearingGroupId" />
+            <ScalarProperty Name="OccClearingMemberNumber" ColumnName="OccClearingMemberNumber" />
+            <ScalarProperty Name="OccAccountType" ColumnName="OccAccountType" />
+            <ScalarProperty Name="OccAccountId" ColumnName="OccAccountId" />
+            <ScalarProperty Name="OccCollateralType" ColumnName="OccCollateralType" />
+            <ScalarProperty Name="OccOptionSymbol" ColumnName="OccOptionSymbol" />
+            <ScalarProperty Name="OccExpirationYear" ColumnName="OccExpirationYear" />
+            <ScalarProperty Name="OccExpirationMonth" ColumnName="OccExpirationMonth" />
+            <ScalarProperty Name="OccExpirationDay" ColumnName="OccExpirationDay" />
+            <ScalarProperty Name="OccOptionType" ColumnName="OccOptionType" />
+            <ScalarProperty Name="OccOptionStrike" ColumnName="OccOptionStrike" />
+            <ScalarProperty Name="OccOptionStrikeDecimal" ColumnName="OccOptionStrikeDecimal" />
+            <ScalarProperty Name="Blank" ColumnName="Blank" />
+            <ScalarProperty Name="CrossReferenceNumber" ColumnName="CrossReferenceNumber" />
+            <ScalarProperty Name="CustomerAccountNumber" ColumnName="CustomerAccountNumber" />
+            <ScalarProperty Name="OccFiller" ColumnName="OccFiller" />
+            <ScalarProperty Name="DtccFiller" ColumnName="DtccFiller" />
+            <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+            <ScalarProperty Name="SourceType" ColumnName="SourceType" />
+          </MappingFragment></EntityTypeMapping></EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="True" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams>
+      <Diagram Name="Blob.DTCInstructor" ZoomLevel="82">
+        <EntityTypeShape EntityType="DtcInstructorModel.OutgoingPledgeOrder" Width="1.875" PointX="0.75" PointY="0.75" Height="9.316630859375" IsExpanded="true" />
+      </Diagram>
+    </Diagrams>
+  </Designer>
+</edmx:Edmx>
